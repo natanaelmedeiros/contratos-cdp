@@ -1,0 +1,2454 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="datatables/datatables.min.css" >
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/pace.css">
+
+    <title>CDP - Dirafi</title>
+
+    <style> 
+     /*modalidade
+    ------------*/
+    .td3 {
+    text-transform: uppercase;
+    }
+    /*contratado
+    ------------*/
+    .td4 {
+        text-transform: uppercase;
+        text-align: left;
+       
+    }
+    /*cnpj
+    ------------*/
+    .td5, .td7 {
+        white-space: nowrap !important;
+    }
+
+    @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+    }
+    @-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+
+    .fadeTable {
+    opacity:0;
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;}
+
+    .fadeTable-delay {    
+    -webkit-animation-delay:2s;
+    -moz-animation-delay:2s;
+    -o-animation-delay:2s;
+    animation-delay:2s;}
+
+    </style>
+    
+</head>
+
+<body>
+    
+    <header> 
+ 
+        <nav class="nav-first navbar navbar-expand-md ">
+            <div class="container d-flex justify-content-around">           
+                <div>
+                        <a href="#" class="navbar-brand"> <img src="img/logo.png" width="250px"> </a>
+                </div> 
+                <div style="padding-left: 40px !important;">
+                        <a href="#" class="navbar-brand" > <img src="img/acesso.png" width="50%"> </a>
+                </div>
+            </div> 
+        </nav>
+
+        <nav class="nav-second navbar navbar-expand-md">
+            <div class="container ">
+                <button class="navbar-toggler navbar-light bg-light" data-toggle="collapse" data-target="#nav-third"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                <div class=" fill collapse navbar-collapse" id="nav-third">
+                        <ul class=" navbar-nav align-items-center">
+                            <li class="nav-item "> <a href="index.html" class="nav-link pageactive ">Obras e Serviços</a> </li>
+                            <li class="nav-item "> <a href="credenciamento.html" class="nav-link">Credenciamento</a> </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ASD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Autorização de Serviço
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="ASD">
+                                  <a class="dropdown-item" href="dirafi.html">Diretoria Administrativa Financeira</a>
+                                  <a class="dropdown-item" href="direxe.html">Diretoria Executiva</a>
+                                  <a class="dropdown-item" href="dirgep.html">Diretoria de Gestão Portuária</a>
+                                  <a class="dropdown-item" href="dirpre.html">Diretoria da Presidência</a>
+                                </div>
+                            </li>
+                            <li class="nav-item "> <a href="arrendamento.html" class="nav-link">Arrendamento</a> </li>
+                            <li class="nav-item "> <a href="cessão de uso.html" class="nav-link">Cessão de Uso</a> </li>
+                            <li class="nav-item "> <a href="operacional.html" class="nav-link">Operacional</a> </li>
+                        </ul>
+                    </div>
+            </div> 
+        </nav>
+
+    </header> 
+
+    <nav> 
+        <div class="container"> 
+        <div class="row">
+        <div class="col-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"> <a href="#">Acesso a Informação</a> </li>
+                <li class="breadcrumb-item"> <a href="#">Licitações e Contratos</a> </li>
+                <li class="breadcrumb-item active">Obras e Serviços</li>
+            </ol>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <p class="descricao1 text-justify">Nessa seção são divulgados os contratos realizados pela Companhia Docas do Pará.</p>
+                
+    </div>
+    </div>  
+    <div class="row">
+    <div class="col-lg-7 col-sm-12">
+        <table class="descricao2 table table-sm text-left" style="color: #555555;">
+            <caption class="text-success">Atualizado em 26/06/2019</caption>
+            <tbody>
+                <tr>
+                    <th scope="row" style="border-top:#fff">I</th>
+                    <td style="border-top:#fff">ÓRGÃO SUPERIOR: MINISTÉRIO DA INFRAESTRUTURA</td>
+                </tr>
+                <tr>
+                    <th scope="row">II</th>
+                    <td>ÓRGÃO SUBORDINADO: COMPANHIA DOCAS DO PARÁ </td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row">III</th>
+                    <td>UNIDADE GESTORA: DIRETORIA ADMINISTRATIVA FINANCEIRA </td>
+                </tr>
+            </tbody>
+        </table>       
+    </div>
+    </div>   
+    </div>
+
+    <div class="container"> 
+    <div class="row">
+    <div class="col-lg-8 col-sm-12">
+    <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+        <div style="font-family: 'proximanovacondensed';">Como encontrar informações na tabela</div>
+    </button>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Pesquise por: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+                <div class="modal-body"> Número do contrato </br> Número do processo </br> Nome da empresa </br>
+                    Modalidade </br> Parte do objeto </br> Nome do Fiscal </br> Situação do contrato
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="fadeTable fadeTable-delay">
+    <table class="display responsive nowrap" id="tab1" align="center" style="width:100%;" data-page-length="25">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th data-priority="1">ASD</th>
+            <th>PROCESSO</th>
+            <th>ANO</th>
+            <th>MODALIDADE</th>
+            <th data-priority="2">CONTRATADO</th>
+            <th>CNPJ</th>
+            <th>SITUAÇÃO</th>
+            <th>FISCAL</th>
+            <th>ÍNICIO</th>
+            <th>TÉRMINO</th>
+            <th>OBJETO</th>
+            <th>ADITIVOS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Obras e serviços 2019 -->
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2019</td>
+	<td class="td?"> 3048/2018</td>
+    <td class="td2">2019</td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">TELEMAR NORTE LESTE S/A</td>
+    <td class="td5">33.000.118/0001-79</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7">SUPERVISÃO DE OPERAÇÃO DE SOLUÇÕES - SUOPER</td>
+    <td class="td8">13/05/2019</td>
+    <td class="td9">31/10/2019</td>
+    <td class="td10">Contratação de empresa espealizada na prestação de serviços de fornecimento de telefonia fixa comutada para as unidades da CDP.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47218181/ASD+DIRAFI+03+2019+TELEMAR.pdf/40f7ad15-5b0a-47e7-84b7-6a2338df88bc" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2019</td>
+	<td class="td?"> 2118/2018</td>
+    <td class="td2">2019 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">MICRODATA SISTEMAS ELETRÔNICOS LTDA - ME</td>
+    <td class="td5">04.615.649/0001-78</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE OPERAÇÃO DE SOLUÇÕES - SUOPER</td>
+    <td class="td8">10/01/2019 </td>
+    <td class="td9">25/01/2019 </td>
+    <td class="td10">Contratação de empresa especializada para prestação de serviços de interligação na malha interna de telecomunicações (abrangendo cabos, fios, tomadas e quadros)</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47218181/ASD+DIRAFI+02+2019+MICRODATA.pdf/12bd597a-4301-4b68-8e65-57a843d1ca77" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2019</td>
+	<td class="td?"> 3463/2018</td>
+    <td class="td2">2019 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ALCASYSTEM COMÉRCIO E SERVIÇOS LTDA</td>
+    <td class="td5">01.676.902/0001-05</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">03/01/2019 </td>
+    <td class="td9">06/01/2019 </td>
+    <td class="td10">Contratação de empresa especializada para prestação de serviços de atualização do software de comunicação (Conex Telemática) para relógios de ponto (CodinREP Telemática), permitindo a comunicação destes com o ERP da SENIOR.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47218181/ASD+DIRAFI+01+2019+ALCASYSTEM.pdf/a1b6290e-c31b-42b8-8506-c503c7dc00c1" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">19/2018</td>
+	<td class="td?"> 889/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">RODRIGO PIMENTEL MIRANDA</td>
+    <td class="td5">903.827.302-91</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE CADASTRO E PAGAMENTO - SUPCAP</td>
+    <td class="td8">28/12/2018 </td>
+    <td class="td9">28/03/2019 </td>
+    <td class="td10">Contratação de pessoa física para realizar levantamento e elaboração de planilhas de cálculos das diferenças das horas extras noturnas.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+19+2018+RODRIGO+PIMENTEL+MIRANDA.pdf/d73dae78-2347-4cc0-850c-6feb0c698c89" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">18/2018</td>
+	<td class="td?"> 3478/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">INTERTON COMÉRCIO LTDA - EP</td>
+    <td class="td5">00.968.806/0001-78</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA</td>
+    <td class="td8">26/12/2018 </td>
+    <td class="td9">05/01/2019 </td>
+    <td class="td10">Contratação de empresa especializada para prestação de serviços, para manutenção de nobreaks pertecentes à CDP.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+18+2018+INTERTON+COMERCIO.pdf/fe5d3407-b5aa-4f5e-887b-572790a525ca" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">17/2018</td>
+	<td class="td?"> 3477/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PSB CARRILHO</td>
+    <td class="td5">17.275.882/0001-09</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">21/12/2018 </td>
+    <td class="td9">18/01/2020 </td>
+    <td class="td10">Prestação de serviço de manutenção preventiva e corretiva no relógio de 04 faces no Ed. Sede.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+17+2018+PSB+CARRILHO+MEI.pdf/30e41dc8-ed03-413d-a089-57709bc3ab3e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">16/2018</td>
+	<td class="td?"> 3062/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">AUDICON - AUDITORIA, CONSULTORIA E CONTABILIDADE S/S LTDA</td>
+    <td class="td5">63.846.067/0001-61</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">04/12/2018 </td>
+    <td class="td9">02/02/2019 </td>
+    <td class="td10">Contratação de pessoa jurídica visando à prestação de serviços na área de Contábil/Patrimonial através de profissionais habilitados e abalizados junto à SUAIPA para ações de serviços especializados na avaliação da vida útil dos bens pertencentes à CDP.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+16+2018.pdf/2a41095e-b93e-4a95-9950-b399ddc7d92e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">15/2018</td>
+	<td class="td?"> 3124/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SPLAM -SERVIÇO DE PLANEJAMENTO E ASSESSORIA EIRELI</td>
+    <td class="td5">08.801.785/0001-03</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">23/11/2018 </td>
+    <td class="td9">22/11/2019 </td>
+    <td class="td10">Prestação de serviço de consultoria especializada em gestão de contratos e formulação de novos processos de contratação considerando as inovações da lei nº 13.303/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+15+2018.pdf/14d655a4-a960-4804-bf3c-16906f1e5938" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">14/2018</td>
+	<td class="td?"> 3123/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">JT COMÉRCIO E SERVIÇOS</td>
+    <td class="td5">31.854.758/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">23/11/2018 </td>
+    <td class="td9">29/11/2018 </td>
+    <td class="td10">Prestação de serviços de instalação de divisórias na sala da SUSERV, nova sala da GEADMI e SUAIPA, do prédio anexo ao Edifício Sede da CDP.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+14+2018_organized.pdf/4b873889-d18f-4597-8903-f2b49e796492" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">13/2018</td>
+	<td class="td?"> 2815/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ELEVADORES OK COMÉRCIO DE PEÇAS, COMPONENTES E SERVIÇOS DE ELEVADORES</td>
+    <td class="td5">04.615.616/0001-28</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">01/11/2018 </td>
+    <td class="td9">31/10/2019 </td>
+    <td class="td10">Serviços de manutenção preventiva e corretiva do elevador do edifício sede desta CDP, além de substituição de porta pantográfica e modernização do sistema de abertura e fechamento da mesma.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+13+2018_organized.pdf/a015e854-80ef-4961-ad76-c8c2fd938a6e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">12/2018</td>
+	<td class="td?"> 2217/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">TECPRINT SOLUÇÕES</td>
+    <td class="td5">17.012.596/0001-42</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE OPERAÇÃO DE SOLUÇÕES - SUOPER</td>
+    <td class="td8">23/08/2018 </td>
+    <td class="td9">28/08/2018 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva, visando à restauração do estado normal de operação das impressoras laser monocromáticas da Marca HP - Modelos M4345 e Modelos da Série P4000.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+12+2018_organized.pdf/85a2aa47-8442-49e1-8bdb-4c74baccecba" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">11/2018</td>
+	<td class="td?"> </td>
+    <td class="td2">2018 </td>
+    <td class="td3"> </td>
+    <td class="td4"> </td>
+    <td class="td5"> </td>
+    <td class="td6">CANCELADA</td>    
+    <td class="td7"> </td>
+    <td class="td8"> </td>
+    <td class="td9"> </td>
+    <td class="td10"> </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">10/2018</td>
+	<td class="td?"> 2117/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">INTERTON COMÉRCIO LTDA - EP</td>
+    <td class="td5">00.968.806/0001-78</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">07/08/2018 </td>
+    <td class="td9">17/08/2018 </td>
+    <td class="td10">Prestação de serviços de manutenção de impressora plotter.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+10+2018_organized.pdf/23f4dafc-9155-4b24-84a4-03b7f237fee9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">09/2018</td>
+	<td class="td?"> 1725/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">BRASILCARD ADMINISTRADORA DE CARTÕES LTDA</td>
+    <td class="td5">03.817.702/0001-50</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERÊNCIA ADMINSTRATIVA</td>
+    <td class="td8">26/06/2018 </td>
+    <td class="td9">25/08/2018 </td>
+    <td class="td10">Prestação de serviços de gerenciamento do abastecimento de combustíveis de veículos, lanchas, equipamentos operacionais e outros serviços prestados por postos credenciados, por meio da implantação e operação de um sistema informatizado e integrado com utilização de cartão de pagamento magnético ou micro processador e disponibilização de rede credenciada de postos de combustível, compreendendo a distribuição de álcool (etanol), gasolina comum, diesel comum e derivados.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+09+2018_organized.pdf/e5cb1a89-50d7-4d85-a03b-74399efe1005" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2018</td>
+	<td class="td?"> 1379/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">INTERTON COMÉRCIO LTDA - EP</td>
+    <td class="td5">00.968.806/0001-78</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">28/05/2018 </td>
+    <td class="td9">07/06/2018 </td>
+    <td class="td10">Prestação de serviços de manutenção de impressora plotter.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+08+2018_organized.pdf/19299c00-7674-4b2c-ba41-ae51c2cce18f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">07/2018</td>
+	<td class="td?"> </td>
+    <td class="td2">2018 </td>
+    <td class="td3"> </td>
+    <td class="td4"> </td>
+    <td class="td5"> </td>
+    <td class="td6">CANCELADA</td>    
+    <td class="td7"> </td>
+    <td class="td8"> </td>
+    <td class="td9"> </td>
+    <td class="td10"> </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2018</td>
+	<td class="td?"> 933/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">OPERACIONAL CONSTRUÇÕES, REFORMAS E SERVIÇOS LTDA</td>
+    <td class="td5">15.449.145/0001-41</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">04/04/2018 </td>
+    <td class="td9">14/04/2018 </td>
+    <td class="td10">Prestação de serviços de instalação de divisórias naais, adequação de piso elevado para abertura de portas e remoção de divisórias existentes na sala da GETINF, para atender à necessidade de reorganização dos setores que compôem a GETINF, isolando áreas para contenção de ruídos e disponibilizar sala para acomidar a Assessoria da DIRAFI que se encontra sem sala atualmente.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+06+2018_organized.pdf/2a200e75-486a-43bb-b8ad-591a7193c049" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2018</td>
+	<td class="td?"> 720/2018</td>
+    <td class="td2">2018 </td>
+    <td class="td3"> </td>
+    <td class="td4">TELEMAR NORTE LESTE S/A</td>
+    <td class="td5">33.000.118/0001-79</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">14/03/2018 </td>
+    <td class="td9">12/06/2018 </td>
+    <td class="td10">Contratação de empresa especializada na prestação de serviços de fornecimento de telefonia fixa comutada para as unidades da Companhia Docas Do Pará</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2018</td>
+	<td class="td?"> 82/2017</td>
+    <td class="td2">2018 </td>
+    <td class="td3"> </td>
+    <td class="td4">B. A. REFRIGERAÇÃO E SEGURANÇA ELETRÔNICA LTDA - ME</td>
+    <td class="td5">11.640.8155/0001-51</td>
+    <td class="td6">RESCINDIDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">30/01/2018 </td>
+    <td class="td9">01/04/2018 </td>
+    <td class="td10">Contratação de empresa especializada na prestação de serviços de manutenção preventiva e corretiva em todos o equipamentos condicionadores de ar, ventilação (exaustores, ventiladores) e refrigeradores, bebedouros, geladeiras e frigobares, instalados nas dependências da CDP, compreendendo as areas do Edificio Sede, predio anexo, porto de Belém, porto de Vilado Conde que localiza-se no município de Barcarena, terminal petroquímico de Miramar e terminal portuário de Outeiro, inclusos os custos de fornecimento de materiais e insumos.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+04+2018.pdf/2b1746e3-0942-4b93-bf7f-9eee6bcac81a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2018</td>
+	<td class="td?"> 86/2017</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">COSTA CONSULTORIA</td>
+    <td class="td5">29.365.022/0001-37</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA</td>
+    <td class="td8">25/01/2018 </td>
+    <td class="td9">26/01/2019 </td>
+    <td class="td10">Contratação de pessoa jurídica visando à prestação de serviços na área de Consultoria através de profissionais habilitados e abalizados junto à SUAIPA para ações de implementação, parametrização de informações não importadas pelo Sistema Senior no momento de sua implantação nesta Companhia, criação e catalogação de informações dos Bens através da tecnologia chamada QR-CODE.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+03+2018_organized.pdf/57820075-accc-45d9-bafb-07eb8b856a97" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2018</td>
+	<td class="td?"> 86/2017</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CCS CONSULTORIA</td>
+    <td class="td5">28.050.167/0001-86</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA</td>
+    <td class="td8">25/01/2018 </td>
+    <td class="td9">26/01/2019 </td>
+    <td class="td10">Contratação de pessoa jurídica visando à prestação de serviços na área de Consultoria através de profissionais habilitados e abalizados junto à SUAIPA para ações de implementação, parametrização de informações não importadas pelo Sistema Senior no momento de sua implantação nesta Companhia, criação e catalogação de informações dos Bens através da tecnologia chamada QR-CODE.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187763/ASD+02+2018_organized.pdf/17296bc3-16ab-4553-8c24-ad1201203742" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2018</td>
+	<td class="td?"> -</td>
+    <td class="td2">2018 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4"> -</td>
+    <td class="td5"> -</td>
+    <td class="td6">CANCELADA</td>    
+    <td class="td7"> -</td>
+    <td class="td8"> - -</td>
+    <td class="td9"> </td>
+    <td class="td10"> -</td>
+    <td class="td11"> </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">26/2017</td>
+	<td class="td?"> 22/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">DANIELA RAMOS DA SILVA MIRANDA</td>
+    <td class="td5">17.012.596/0001-42</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE TECNOLOGIA DE INFORMAÇÃO - GETINF</td>
+    <td class="td8">05/12/2017 </td>
+    <td class="td9">10/12/2017 </td>
+    <td class="td10">Contratação de empresa especializada na prestação de serviços de manutenção corretiva, objetivando a restauração do estado normal de operação das impressoras lasers monocromáticas da marca HP, modelos da série P4000 e do modelo M4345.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+26+2017_organized.pdf/2743bf7f-65b4-4487-839d-cbac2f455e6c" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">25/2017</td>
+	<td class="td?"> 8441/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">AEP CONSULTORIA EMPRESARIAL E FISCAL</td>
+    <td class="td5">13.500.720/0001-68</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA</td>
+    <td class="td8">29/11/2017 </td>
+    <td class="td9">28/01/2018 </td>
+    <td class="td10">Contratação de Pessoa Jurídica visando a prestação de serviços na área contábil/patrimonial através de profissionais habilitados e abalizados junto à SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA para ações de serviços especializados na avaliação da vida útil dos bens pertencentes à CDP, para que a comissão passe a realizar o teste de IMPAIRMENT.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+25+2017_organized.pdf/59472dc8-3f5c-4114-977f-1fed8a2f022e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">24/2017</td>
+	<td class="td?"> 3533/2016</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">V S P DE JESUS SERVIÇOS ME</td>
+    <td class="td5">28.176.393/0001-08</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA</td>
+    <td class="td8">29/11/2017 </td>
+    <td class="td9">28/01/2018 </td>
+    <td class="td10">Contratação de empresa especializada na prestação de serviços na área de agrimensura através de técnico habilitado junto ao INCRA e abalizado junto à SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA para efetuar serviço de georreferenciamento das áreas da CDP em Santarém, cadastro de edificações destas áreas, localização, demarcação e certificação de 20 matriculas existentes em nome da Companhia Docas do Pará, fazendo a confirmação e unificação das matrículas junto ao Cartório da Comarca de Santarém.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+24+2017_organized.pdf/bfcd81d4-de0f-4d7b-ad2e-3772e5fcc844" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">23/2017</td>
+	<td class="td?"> 119/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">MICRODATASISTEMAS</td>
+    <td class="td5">09.492.650/0002-57</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE TECNOLOGIA DE INFORMAÇÃO - GETINF</td>
+    <td class="td8">28/11/2017 </td>
+    <td class="td9">01/12/2017 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva, objetivando a restauração da comunucação de todos os relógios de Ponto (REP's) com o software utilazdo no controle de frequência dos funcionários.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+23+2017_organized.pdf/8c541d27-7aa3-4f38-984d-0630b93932c9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">22/2017</td>
+	<td class="td?"> 8148/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ALCASYSTEM COMÉRCIO E SERVIÇOS LTDA</td>
+    <td class="td5">01.676.902/0001-05</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">13/11/2017 </td>
+    <td class="td9">18/11/2017 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva do sistema interno de telecomunicações do edificio sede, prédio anexo e porto de Belém.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+22+2017_organized.pdf/fbb49ac5-f139-44f7-8a6c-4592750acaec" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">21/2017</td>
+	<td class="td?"> </td>
+    <td class="td2">2017 </td>
+    <td class="td3"> </td>
+    <td class="td4"> </td>
+    <td class="td5"> </td>
+    <td class="td6"> </td>    
+    <td class="td7"> </td>
+    <td class="td8"> </td>
+    <td class="td9"> </td>
+    <td class="td10"> </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">20/2017</td>
+	<td class="td?"> 6089/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">EDERCYR D EJESUS SAT'ANA DE OLIVEIRA - MEI</td>
+    <td class="td5">24.795.354/0001-38</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE TECNOLOGIA DE INFORMAÇÃO - GETINF</td>
+    <td class="td8">27/10/2017 </td>
+    <td class="td9">26/01/2018 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva e preventiva, na área de infraestrutura de rede e suporte, em todos os Portos da Companhia Docas do Pará.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+20+2017_organized.pdf/90885288-c236-4826-948c-d886fe1cc2f5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">19/2017</td>
+	<td class="td?"> 6030/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">R S CONSULTT CONSULTORIA E CONTABILIDADE EIRELI</td>
+    <td class="td5">17.741.408/0001-28</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE CONTABILIDADE - GECONT</td>
+    <td class="td8">11/10/2017 </td>
+    <td class="td9">10/12/2018 </td>
+    <td class="td10">Contratação de pessoa jurídica para prestação de serviço de Contabilidade, visando dar suporte técnico à gerência de contabilidade para atualização do fechamento dos balancetes do primeiro trimestre.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+19+2017_organized.pdf/199f82bc-8451-4c79-8a60-75cc25d74d60" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">18/2017</td>
+	<td class="td?"> 5033/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">K NOGUEIRA ASSESSORIA CONTÁBIL</td>
+    <td class="td5">25.139.067/0001-32</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7">GEFINS</td>
+    <td class="td8">02/10/2017 </td>
+    <td class="td9">02/10/2018 </td>
+    <td class="td10">Contratação de pessoa jurídica na área Administrativa, para atualizar o sistema fazendo o acompanhamento das prestações de contas dos Portos STM/ALT/ITA/OBI e a regularização do faturamento nos sistema SCAP, ERP SENIOR junto às prefeituras desde 2016 até os dias atuais, dando suporte aos portos na implantação do sistema ERP SENIOR, atualizando os sistema com dados eficientes e acompanhando os procedimentos de faturamento junto aos portos da Companhia.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+18+2017_organized.pdf/ca8ae159-1ff9-4cd2-93ea-71e46fade356" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">17/2017</td>
+	<td class="td?"> 2290/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PROSERV SERVIÇOS LIMPEZA E CONSESRVAÇÃO LTDA-ME</td>
+    <td class="td5">23.699.685/0001-01</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">24/07/2017 </td>
+    <td class="td9">23/08/2017 </td>
+    <td class="td10">Prestação de serviços de roçagem mercânica a ser executado no Terminal de Outeiro.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+17+2017_organized.pdf/dfc875bc-ab2e-46b5-a31b-ba38be076823" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">16/2017</td>
+	<td class="td?"> 2308/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CLAYTON CHINA SIMÕES - MEI</td>
+    <td class="td5">28.050.167/0001-86</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA</td>
+    <td class="td8">11/07/2017 </td>
+    <td class="td9">07/01/2018 </td>
+    <td class="td10">Contratação de pessoa jurídica na área Arquivistica Documental, com conhecimentos na área de Administração, com ofoco em assuntos arquivisticos, para realizar serviços de re-catalogação, organização,digitalização de arquivos e documentos existentes e recebidos no seteor de Arquivo.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+16+2017_organized.pdf/6ba22314-fef4-4bd4-8241-f8833190b867" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">15/2017</td>
+	<td class="td?"> 2308/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">MARCIO HAMILTON DA CONCEIÇÃO ARAUJO - MEI</td>
+    <td class="td5">24.677.772/0001-20</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO DE ATIVOS IMOBILIÁRIOS E PATRIMÔNIO - SUAIPA</td>
+    <td class="td8">11/07/2017 </td>
+    <td class="td9">07/01/2018 </td>
+    <td class="td10">Contratação de pessoa jurídica na área Arquivistica Documental, com conhecimentos na área de Administração, com ofoco em assuntos arquivisticos, para realizar serviços de re-catalogação, organização,digitalização de arquivos e documentos existentes e recebidos no seteor de Arquivo.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+15+2017_organized.pdf/995ff2fc-a5f2-4e5d-ac38-694b2f9b8eec" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">14/2017</td>
+	<td class="td?"> </td>
+    <td class="td2">2017 </td>
+    <td class="td3"> </td>
+    <td class="td4"> </td>
+    <td class="td5"> </td>
+    <td class="td6"> </td>    
+    <td class="td7"> </td>
+    <td class="td8"> </td>
+    <td class="td9"> </td>
+    <td class="td10"> </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">13/2017</td>
+	<td class="td?"> 2154/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">R S CONSULTT CONSULTORIA E CONTABILIDADE EIRELI</td>
+    <td class="td5">17.714.408/0001-28</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE CONTABILIDADE - GECONT</td>
+    <td class="td8">22/06/2017 </td>
+    <td class="td9">20/09/2017 </td>
+    <td class="td10">Contratação de pessoa jurídica para prestação de serviço de contabilidade, visando dar suporte técnico à gerência de contabilidade para atualização do fechamento dos balancetes do primeiro quadrimestre, compreendendo auxiliar o departamento contábil na elaboração das conciliações, auxiliar na rotina diária de lançamentos e auxiliar na análise de dados, bem como apontar os ajustes necessários no ERP.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+13+2017_organized.pdf/d0851554-91a4-4436-b8a0-d8d41d642639" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">12/2017</td>
+	<td class="td?"> 2161/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3"> </td>
+    <td class="td4">CAROLINA CARVALHO CALDAS - SOLUÇÕES CONTÁBEIS</td>
+    <td class="td5">14.984.051/0001-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE GESTÃO FINANCEIRA (CONTAS A RECEBER E TESOURARIA) - SUFCOR</td>
+    <td class="td8">22/06/2017 </td>
+    <td class="td9">20/09/2017 </td>
+    <td class="td10">Contratação de Pessoa Jurídica para dar o suporte necessário às demandas de lançamento no sistema ERP SÊNIOR, tendo como objeto prinicpal a realização de atividades relaciondas na inserção de títulos pendentes de quitação compreendidos entre o período de 2002 a 31/12/2016, compreendendo efeturar lançamentos das notas fiscais de entrada no Sistema Sênior e efetuar lançamentos das notas de débito e outros documetnos no Sistema Sênior.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+12+2017_organized.pdf/74918825-eda6-4df0-811f-64a0f9ac8001" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">11/2017</td>
+	<td class="td?"> 1902/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3"> </td>
+    <td class="td4">PEDRO SANTA BRIGIDA CARRILHO</td>
+    <td class="td5">17.275.882/0001-09</td>
+    <td class="td6">RESCINDIDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">05/06/2017 </td>
+    <td class="td9">31/01/2018 </td>
+    <td class="td10">Contratação de empresa de prestação de serviços de manutenção hidráulica e pequenos reparos de marcenaria, carpitanria e alvenaria, sem o fornecimento de material, no edificio sede e no prédio anexo.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+11+2017_organized.pdf/7d6725a0-47d9-4e14-b6e5-efdb22769371" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">10/2017</td>
+	<td class="td?"> 115/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CARMEM DO SOCORRO V DA SILVA - ME</td>
+    <td class="td5">23.293.023/0001-37</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE CONTABILIDADE - GECONT</td>
+    <td class="td8">07/04/2017 </td>
+    <td class="td9">06/07/2017 </td>
+    <td class="td10">Contratação de pessoa jurídica na área contábil, com conhecimento na área de recursos humanos, com foco em assuntos trabalhistas e previdenciário, para realizar serviços de elavoração d eplanilhas de cálculos do INSS e FGTS, com objetivo de retificação de GEFIP, de empregados da CDP, para apresentação junto à Caixa Economica Federal.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+10+2017_organized.pdf/cbb0d4b0-d384-48eb-b897-4d9749098f6a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">09/2017</td>
+	<td class="td?"> 1369/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">JPM SILVA - SERVIÇOS DE INFORMÁTICA S/S LTDA - ME</td>
+    <td class="td5">11.432.186/0001-74</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUGESC</td>
+    <td class="td8">19/04/2017 </td>
+    <td class="td9">16/07/2017 </td>
+    <td class="td10">Contratação de empresa para ministrar curso na área de informática</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+09+2017_organized.pdf/f199d039-02ae-4c9a-a542-49d956555a15" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2017</td>
+	<td class="td?"> 844/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ATLANTA RENT A CAR LTDA - EPP</td>
+    <td class="td5">01.135.910/0001-44</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GEADMI</td>
+    <td class="td8">13/03/2017 </td>
+    <td class="td9">11/06/2017 </td>
+    <td class="td10">Prestração de serviço de locação de veículo,.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+08+2017_organized.pdf/a579f47e-4edc-4611-94ed-1bbad0967f34" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">07/2017</td>
+	<td class="td?"> 607/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SPLAM - SERVIÇOS DE PLANEJAMENTO E ASSESSORIA LTDA-EPP</td>
+    <td class="td5">662893352-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA ADMINSITRATIVA - GEADMI</td>
+    <td class="td8">13/03/2017 </td>
+    <td class="td9">13/03/2018 </td>
+    <td class="td10">Consultoria atendendo às demandas necessáriasde análise de contratações em geral afetas à Gerencia Administrativa.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+07+2017_organized.pdf/7df96932-4158-466e-8fa7-24a04e0a4d12" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2017</td>
+	<td class="td?"> 144/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CVS - CONTABILIDADE - MEI</td>
+    <td class="td5">23.293.023/0001-37</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE CONTABILIDADE - GECONT</td>
+    <td class="td8">24/02/2017 </td>
+    <td class="td9">05/04/2017 </td>
+    <td class="td10">Prestação de serviços contratados de consultoria contábil - GERENCIA DE CONTABILIDADE - GECONT atendendendo às demandas necessárias ao fechamento do balanço 2015, incluindo testes nos registros contábeis e outros procedimentos aplicáveis nas circunstâncias.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+06+2017_organized.pdf/a053e45a-dd46-457c-8d12-23a7ebae8302" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2017</td>
+	<td class="td?"> 121/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ELEVADORES OK COMERCIO DE PEÇAS, COMPONETES E SERVIÇOS DE ELEVADORES LTDA - EPP</td>
+    <td class="td5">04.615.616/0001-28</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">17/02/2017 </td>
+    <td class="td9">17/02/2018 </td>
+    <td class="td10">Prestação de serviço, com fornecimento de mão de obra para manutenção preventiva e corretiva em 01 (um) elevador localizado no prédio sede da CDP,conforme CI/SUPSEG de nº27/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+05+2017_organized.pdf/510941bc-b7fc-43ae-adae-e3b162a1bed2" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2017</td>
+	<td class="td?"> 2534/2016</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PROSERV SERVIÇOS LIMPEZA E CONSESRVAÇÃO LTDA-ME</td>
+    <td class="td5">23.699.685/0001-01</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">09/02/2017 </td>
+    <td class="td9">11/03/2017 </td>
+    <td class="td10">Prestação de serviços de roçagem mercânica a ser executado no Porto de Vila do Conde, com fornecimento de mão de obra, máquinas, equipamentos e toda as ferramentas para a execução dos serviços.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+04+2017_organized.pdf/a213a861-bc4f-482c-bb75-66dbd884667d" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2017</td>
+	<td class="td?"> 565/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PSB CARRILHO-MEI</td>
+    <td class="td5">17.275.882/0001-09</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">SUPERVISÃO DE SERVIÇOS GERAIS - SUSERV</td>
+    <td class="td8">09/02/2017 </td>
+    <td class="td9">11/03/2017 </td>
+    <td class="td10">Prestação de serviço de manutenção predial no prédio do almoxarifado.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+03+2017_organized.pdf/cde3863c-d149-4fa4-a99f-898ea9604d48" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2017</td>
+	<td class="td?"> 75/2017</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">M.D. SISTEMAS DE COMPUTAÇÃO LTDA</td>
+    <td class="td5">39.270.012/0001-71</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE TECNOLOGIA DE INFORMAÇÃO - GETINF</td>
+    <td class="td8">19/12/2016 </td>
+    <td class="td9">18/01/2017 </td>
+    <td class="td10">Prestação de serviço de manutenção e Suporte Técnico dos Sistemas Senior</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+02+2017_organized.pdf/ed1ebbb9-98a2-4513-86cf-25c0e76936d9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2017</td>
+	<td class="td?"> 3837/2016</td>
+    <td class="td2">2017 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">M.D. SISTEMAS DE COMPUTAÇÃO LTDA</td>
+    <td class="td5">39.270.012/0001-71</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7">GERENCIA DE TECNOLOGIA DE INFORMAÇÃO - GETINF</td>
+    <td class="td8">13/01/2017 </td>
+    <td class="td9">20/01/2017 </td>
+    <td class="td10">Prestação de serviço de consultoria nas atividades de execução da operação no sistema Senior, com foco nos módulos de contabilidade, estqoue e patrimonio.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47187765/ASD+01+2017_organized.pdf/4e5439f5-483f-4c20-b8e5-a31ec53cfd0d" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">18/2016</td>
+	<td class="td?"> 3858/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">DAYSE RODRIGUES DOS SANTOS</td>
+    <td class="td5">967.918.702-06</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">27/12/2016 </td>
+    <td class="td9">25/06/2017 </td>
+    <td class="td10">Prestação de serviços na area administrativa dando suporte necessário as demandas para auxiliar na elaboração de documentos, relatorios, planilhas ou formularios. Manter, organizar,atualizar arquivos, ficharios, livros e outros documentos, para possibilitar novas consultas .</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+18+2016.pdf/00decc2b-3d54-4605-8d2c-00f780401eb3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">17/2016</td>
+	<td class="td?"> 3618/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">FM - SERVIÇOS CONTÁBEIS - MEI</td>
+    <td class="td5">24.893.081/0001-64</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">19/12/2016 </td>
+    <td class="td9">17/06/2017 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado a fim de atender às demandas necessárias ao suporte técnico {à Gerência de Contabilidade - GECONT, conforme processo nº 2177/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+17+2016.pdf/a8e82205-e139-4711-87f9-28635f0ef743" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">16/2016</td>
+	<td class="td?"> 2371/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">KERLEY ROSIANE SILVA FERREIRA</td>
+    <td class="td5">25.139.067/0001-32</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">30/11/2016 </td>
+    <td class="td9">29/05/2017 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado a fim de atender às demandas necessárias ao suporte técnico {à Gerência Financeira - GERFIN, conforme processo nº 2371/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+16+2016.pdf/9b84685b-a7d6-467d-83b4-e3c79ad491d5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">15/2016</td>
+	<td class="td?"> 2937/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">EDERCYR DE JESUS SANT'ANA DE OLIVEIRA - MEI</td>
+    <td class="td5">24.795.354/0001-38</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">24/11/2016 </td>
+    <td class="td9">23/03/2017 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado junto à área de infraestrutura de rede e suporte, para executar o trabalho de suporte nos portos da CDP, conforme processo de nº 1849/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+15+2016.pdf/fe8cf658-b8d8-4835-9e79-bea83afb11dd" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">14/2016</td>
+	<td class="td?"> 2441/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ATLANTA RENT A CAR LTDA - EPP</td>
+    <td class="td5">01.135.910/0001-44</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">28/09/2016 </td>
+    <td class="td9">27/02/2017 </td>
+    <td class="td10">Prestração de serviço de locação de veículo, conforme Processo nº 2441/2016</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+14+2016.pdf/c62f64ea-0e11-4e7a-9542-0a3a3a7dc795" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">13/2016</td>
+	<td class="td?"> 2741/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SPLAM SERVIÇO DE PALNEJAMENTO E ASSESSORIA LTDA -EPP.</td>
+    <td class="td5">08.801.785/0001-03</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">31/08/2016 </td>
+    <td class="td9">30/10/2016 </td>
+    <td class="td10">Elaboração de manuais de rotinas administrativas contendo instruções de controle na área de Gestão e Fiscalização de Contratos, bem como relativos aos processos de contratações, conforme processo nº 2741/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+13+2016.pdf/0c739e87-8ef2-4204-b231-dd39d4df87f9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">12/2016</td>
+	<td class="td?"> 2420/2016</td>
+    <td class="td2">2016</td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">MD SISTEMAS DE COMPUTRAÇÃO LTDA</td>
+    <td class="td5">39.270.012/0001-71</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">31/08/2016 </td>
+    <td class="td9">14/09/2016 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado a fim de Cadastrar Notas Fiscais no período de 01 a 12 de julho de 2016, dos portos da CDP no sistema Sênior, incluindo os dados gerais das notas, itens e rateios, conforme processo nº 2420/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+12+2016.pdf/87330b81-6915-493a-a918-4bbb8c0c0f19" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">11/2016</td>
+	<td class="td?"> 2371/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">KERLEY ROSIANE SILVA FERREIRA</td>
+    <td class="td5">25.139.067/0001-32</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">04/07/2016 </td>
+    <td class="td9">03/01/2017 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado a fim de atender às demandas necessárias ao suporte técnico à Gerência Financeira - GERFIN, conforme processo nº 2371/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+11+2016.pdf/0d82bbac-aa4d-4d3b-bc60-08c1a61c428c" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">10/2016</td>
+	<td class="td?"> 2138/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">RCN COMÉRCIO SERVIÇOS LTDA - EPP</td>
+    <td class="td5">02.055.122/0001-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">12/07/2016 </td>
+    <td class="td9">11/07/2017 </td>
+    <td class="td10">Prestação de serviços de manutenção e fornecimento de fechaduras, portas blindex, portões de ferro, cópia de chave e confecção de carimbos, conforme processo nº 2138/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+10+2016.pdf/81198121-57bf-4ba1-9ee1-be40df76295c" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">09/2016</td>
+	<td class="td?"> 2177/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">FM - SERVIÇOS CONTÁBEIS - MEI</td>
+    <td class="td5">24.893.081/0001-64</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">01/06/2016 </td>
+    <td class="td9">31/12/2016 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado a fim de atender às demandas necessárias ao suporte técnico à Gerência de Contabilidade - GECONT, conforme processo nº 2177/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+09+2016.pdf/2d33e500-6b63-45bf-bb5e-23abc8bdfb7f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2016</td>
+	<td class="td?"> 1983/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PSB CARRILHO-MEI</td>
+    <td class="td5">17.275.882/0001-09</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">20/06/2016 </td>
+    <td class="td9">19/06/2017 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitadona manuteção preventiva e corretiva e que mantenha em funcionamento o relógio de 04 (quatro) faces do Edíficio Sede da CDP, conforme processo nº 1983/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+08+2016.pdf/84ced3c3-9c73-4476-9b78-a3700645a451" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">07/2016</td>
+	<td class="td?"> 1849/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">EDERCYR DE JESUS SANT'ANA DE OLIVEIRA - MEI</td>
+    <td class="td5">24.795.354/0001-38</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">15/06/2016 </td>
+    <td class="td9">14/10/2016 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado junto à área de infraestrutura de rede e suporte, para executar o trabalho de suporte nos portos da CDP, conforme processo de nº 1849/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+07+2016.pdf/51d580e4-a6aa-467a-ae5d-dc4fc94adda3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2016</td>
+	<td class="td?"> CI SUPFAT 66/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ANA PAULA DA CONCEIÇÃO DO MONTE</td>
+    <td class="td5">825.132.282-00</td>
+    <td class="td6">RESCINDIDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">25/04/2016 </td>
+    <td class="td9">31/10/2016 </td>
+    <td class="td10">Prestação de serviço, através de técnico habilitado junto à Supervisão de Faturamento para suporte referente à implantação do novo sistema SENIOR, conforme CI SUPFAT de nº 66/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+06+2016.pdf/d2cf6416-5d4c-40ab-ac11-837155e451ab" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2016</td>
+	<td class="td?"> 1530/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">MHCA - SOLUÇÃO EM INFORMÁTICA - MÁRCIO HAMILTON DA C. ARAÚJO - MEI</td>
+    <td class="td5">24.677.772/0001-20</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">09/05/2016 </td>
+    <td class="td9">08/11/2016 </td>
+    <td class="td10">Prestação de serviço na área da hardware, através de técnico habilitado e abalizado junto à Spervisão de Patrimônio para suporte, manutenção corretiva e emissão de laudos estritamente técnicos, conforme processo nº 1530/2016</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+05+2016.pdf/5ea76a80-ab1b-40c2-b95b-4a145ce1a2d6" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2016</td>
+	<td class="td?"> 27/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3"> </td>
+    <td class="td4">ELEVADORES OK LTDA - EPP</td>
+    <td class="td5">04.615.616/0001-28</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">02/05/2016 </td>
+    <td class="td9">01/01/2017 </td>
+    <td class="td10">Prestação de serviço, com fornecimento de mão de obra para manutenção preventiva e corretiva em 01 (um) elevador localizado no prédio sede da CDP,conforme CI/SUPSEG de nº27/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+04+2016.pdf/ec7206ea-b277-4444-9437-6beaf40eed25" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2016</td>
+	<td class="td?"> 1018/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3"> </td>
+    <td class="td4">S.P.UNIVERSAL SERVIÇOS E COMÉRCIO LTDA-ME</td>
+    <td class="td5">04.759.782/0001-06</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">01/04/2016 </td>
+    <td class="td9">30/05/2016 </td>
+    <td class="td10">Prestação de serviço de manutenção preventiva e corretiva nas splits cassete, localizadas nos autos do armazém nº09 do porto de Belém, conforme processo de nº1018/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+03+2016.pdf/52541f1a-f049-4b1e-ac65-a77d2c0b3d7d" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2016</td>
+	<td class="td?"> 500/2016</td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ESCOLA DE FORMAÇÃO DE VIGILANTES PRETÓRIA LTDA.</td>
+    <td class="td5">09.538.055/0001-24</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">10/02/2016 </td>
+    <td class="td9">12/03/2016 </td>
+    <td class="td10">Prestação de serviço especializado na área de segurança, para locação de espaço físico com estrutura adequada para execução e aulasteóricas e práticas que compõem o curso "Habilitação ao cargo de Guarda Portuário, conforme processo de nº 500/2016.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+02+2016.pdf/69a73cc2-ba36-4e46-9f10-7d05fe275bae" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2016</td>
+	<td class="td?"> </td>
+    <td class="td2">2016 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CVS - CONTABILIDADE - MEI</td>
+    <td class="td5">23.293.023/0001-37</td>
+    <td class="td6">CANCELADA</td>    
+    <td class="td7"> </td>
+    <td class="td8">21/01/2016 </td>
+    <td class="td9">20/03/2016 </td>
+    <td class="td10">Prestação de serviços contratados de consultoria contábil - GECONT atendendendo às demandas necessárias ao fechamento do balanço 2015, incluindo testes nos registros contábeis e outros procedimentos aplicáveis nas circunstâncias.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197436/ASD+01+2016.pdf/e3ff13fb-22d8-4797-bc57-5eb96839d59b" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2015</td>
+	<td class="td?"> 2940/2015</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CVS - CONTABILIDADE MEI</td>
+    <td class="td5">23.293.023/0001-37</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">01/10/2015 </td>
+    <td class="td9">31/12/2015 </td>
+    <td class="td10">Prestação de serviço de suporte técnico a Gerência de Contabilidade - GECONT.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+08+2015_organized.pdf/8b2ba1cc-238e-4478-8536-8bdc144395c6" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">07/2015</td>
+	<td class="td?"> 64/2015</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SELMA CABRAL DA SILVA</td>
+    <td class="td5">22.776.300/0001-08</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">01/05/2015 </td>
+    <td class="td9">01/12/2015 </td>
+    <td class="td10">Prestação de serviço de acompanhamento e inserção de dados no Sistema de Gestão Empresarial (ERP) SENIOR (módulo compras)</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+07+2015_organized.pdf/f471877e-552f-4972-ac83-afa287a984db" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2015</td>
+	<td class="td?"> 2049/2015</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SANSEVIEIRA CONSULTORIA AMBIENTAL E PAISAGISMO LTDA</td>
+    <td class="td5">15.0001.344/0001-92</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">13/07/2015 </td>
+    <td class="td9">12/07/2016 </td>
+    <td class="td10">Prestação de serviços de revitalização, recomposição e manutenção dos jardins dos prédios e do almoxarifado central, conforme processo nº 2049/2015 de 26/06/2015</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+06+2015_organized.pdf/34de53d6-6de3-40f2-8eb5-f9685d8a3110" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2015</td>
+	<td class="td?"> 1786/2015</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Ana Paula Oliveira Diniz de Carvalho, Bonnie Facioli Braga, e Weverton Lima Praia,</td>
+    <td class="td5">521.155.932-00, 440.646.672-04, 101.116.202-44.</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">11/06/2015 </td>
+    <td class="td9">10/10/2015 </td>
+    <td class="td10">Prestação de serviço de exames de avaliação psicológica para aquisição e renovação do porte de arma de 56 (cinquenta e seis) componentes da Guarda Portuária da CDP, Conforme Processo nº 1786/2015 de 05/06/2015.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+05+2015_organized.pdf/f44e8fe8-ec8b-443f-a8d4-0a97a20392bf" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2015</td>
+	<td class="td?"> 10/2016 1782/2015 2138/2016</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">RCN COMÉRCIO E SERVIÇOS</td>
+    <td class="td5">02.055.122/0001-00</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7"> </td>
+    <td class="td8">05/06/2015 </td>
+    <td class="td9"> 12/07/2016 04/06/2016 11/07/2017</td>
+    <td class="td10">Prestação de serviços de manutenção e fornecimento de fechaduras, portas blindex, portões de ferro, cópia de chave e confecção de carimbos, conforme processo nº 1782/2015 de 05/06/2015</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+04+2015_organized.pdf/02ac4bbe-8644-4060-b1a8-8d0402cbbff3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2015</td>
+	<td class="td?"> 1778/2015</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CHAVES CONSULTORIA - MEI</td>
+    <td class="td5">22.516.758/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">05/06/2015 </td>
+    <td class="td9">04/11/2015 </td>
+    <td class="td10">Prestação de serviço de assessoria no lançamento de notas fiscais no sistema ERP Sênior (módulo financeiro), análise e correções de lançamentos no referido sistema, conferência e análise de lançamentos de tributos, bem como verificação da consistência quanto aos referidos lançamentos, inclusive no que se refere às transações, serviços, produtos e cadastros de fornecedores e clientes, tudo conformo processo 1778/2015 de 05/06/2015</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+03+2015_organized.pdf/de9542f6-81df-40b6-a28c-bf5466bf34e0" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2015</td>
+	<td class="td?"> 08/2016 1689/2015 1983/2016</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PSB CARRILHO - MEI</td>
+    <td class="td5">17.275.882/0001-09</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">27/05/2015</td>
+    <td class="td9"> 20/06/2016 26/05/2016 19/06/2017</td>
+    <td class="td10">Prestação de serviço de manutenção e funcionamento do relógio de quatro faces do Ed. Sede da Companhia Docas do Pará, com sincronização diária da hora e lubrificação das partes mecânicas móveis com intervalo de 15 dias, ou conforme necessário, de acordo com o desgaste natural, conforme processo 1689/2015, de 27/05/2015</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+02+2015_organized.pdf/ef97bf02-06f6-4f11-a53b-1469ac44fdfc" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2015</td>
+	<td class="td?"> 40/2015</td>
+    <td class="td2">2015 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Fernanda Gabrielle Filiphina Paixão dos Santos</td>
+    <td class="td5">966.409.952-04</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">05/04/2015 </td>
+    <td class="td9">06/08/2015 </td>
+    <td class="td10">Prestação de serviço no assessoramento técnico para validação da implantação do Sistema de Gestão Empresarial (ERP) SENIOR</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197728/ASD+01+2015_organized.pdf/115242a6-cd6c-41f3-a434-5ebc43906d3d" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2014</td>
+	<td class="td?"> 2940/2014</td>
+    <td class="td2">2014 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">RODRIGO PIMENTEL MIRANDA</td>
+    <td class="td5">903.827.302-91</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">16/09/2014 </td>
+    <td class="td9">14/11/2014 </td>
+    <td class="td10">Prestação de serviço objetivando o levantamento de passivo trabalhista da Guarda Portuária e Rondante, referente ao período de fevereiro de 2010 a março de 2014, conforme processo nº 2940/2014 de 16/09/2004.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197860/ASD+08+2014_organized.pdf/ab4b9aa3-909e-4970-a1f0-b4ce87055778" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2014</td>
+	<td class="td?"> 1726/2014</td>
+    <td class="td2">2014 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PEDRO SANTA BRIGIDA CARRILHO</td>
+    <td class="td5">187.329.842-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">23/05/2004 </td>
+    <td class="td9">22/05/2015 </td>
+    <td class="td10">Prestação de serviço de manutençaõ do relógio de quatro faces do Ed. Sede da CDP, conforme processo nº 1726/2014, de 2/05/2014</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197860/ASD+06+2014_organized.pdf/77bd3009-4ae5-4b9e-93ac-8ae5cb7c95c2" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2014</td>
+	<td class="td?"> 1805/2014</td>
+    <td class="td2">2014 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">REGINA C. C. SOUZA &amp; CIA. LTDA. - EPP</td>
+    <td class="td5">02.055.122/0001-00</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7"> </td>
+    <td class="td8">03/06/2014 </td>
+    <td class="td9">02/06/2015 </td>
+    <td class="td10">Prestação de serviço de manutenção e fornecimento de fechaduras, portas blindex, portões de ferro, cópias de chave e confecção de carimbos, conforme processo nº 1805/2014, de 29/05/2014</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197860/ASD+05+2014_organized.pdf/9b70ed7e-b87f-4db9-985f-5695d938eda9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2014</td>
+	<td class="td?"> 1775/2014</td>
+    <td class="td2">2014 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SANSEVIEIRA CONSULTORIA AMBIENTAL E PAISAGISMO LTDA</td>
+    <td class="td5">15.0001.344/0001-92</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7"> </td>
+    <td class="td8">03/06/2014 </td>
+    <td class="td9">02/06/2015 </td>
+    <td class="td10">Prestação de serviços de revitalização, recomposição e manutenção dos jardins dos prédios e do almoxarifado central, conforme processo nº 1775/2014 de 27/05/2014</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197860/ASD+04+2014_organized.pdf/cde713ce-5ccd-43f4-b310-f74ab1b5d5e3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2014</td>
+	<td class="td?"> 501/2014</td>
+    <td class="td2">2014 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Ana Paula Oliveira Diniz de Carvalho, Bonnie Facioli Braga, Cássia de Nazaré Rodrigues do Rego Barros, Cátia Guedes Regateiro e Weverton Lima Praia,</td>
+    <td class="td5">521.155.932-00, 440.646.672-04, 520.829.112-68, 374.395.292-00, 101.116.202-44.</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">19/03/2014 </td>
+    <td class="td9">17/05/2014 </td>
+    <td class="td10">Prestação de serviço de exames de avaliação psicológica para renovação do porte de arma de 46 (quarenta e seis) componentes da Guarda Portuária da CDP, Conforme Processo nº 501/2014 de 04/02/20014.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197860/ASD+03+2014_organized.pdf/a8460093-1161-47e3-b15b-5cd6e692afcc" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2014</td>
+	<td class="td?"> 468/2014</td>
+    <td class="td2">2014 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Fernanda Gabrielle Filiphina Paixão dos Santos</td>
+    <td class="td5">966.409.952-04</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">03/02/2014 </td>
+    <td class="td9">02/08/2014 </td>
+    <td class="td10">Prestação de serviço de continuidade ao processo de implantação automatizada dos indicadores de custos gerenciais do BSC da CDP na inplantação do novo sistema ERP, conforme Processo nº 468/2014, de 20/01/2014.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197860/ASD+02+2014.pdf/1bea4c6b-600d-4b07-a2fc-f366d32518b6" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2014</td>
+	<td class="td?"> 07/2014 452/2013 1383/2014 2296/2014</td>
+    <td class="td2">2014 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Jamille Monteiro Lobato da Silva.</td>
+    <td class="td5">891.920.362-87</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">21/01/2014 </td>
+    <td class="td9"> 21/04/2014 21/07/2014 20/04/2014 20/07/2014 20/11/2014</td>
+    <td class="td10">Prestação de serviços de levantamento de dados dos empregados para fins de recadastramento no sistema de informação integrado em fase de implantação na CDP, visando dar suporte, à Gerencia de Recursos Huamnos - GERHUM, conforme Processo CDP nº. 214/2014, de 16/12/2013.</td>
+    <td class="td11">
+        <p><a href="https://www.cdp.com.br/documents/10180/47197860/ASD+01+2014.pdf/25fe3610-0278-4db6-bc2a-729bf187c742" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ASD</a></p>
+    </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">12/2013</td>
+	<td class="td?"> 2264/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Fernanda Gabrielle Filipina Paixão dos Santos</td>
+    <td class="td5">18037.332/0001-06</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">01/08/2013 </td>
+    <td class="td9">01/02/2014 </td>
+    <td class="td10">Prestação de serviço de implantação do sistema de custos gerencial no Balanced Scorecard da CDP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">11/2013</td>
+	<td class="td?"> 2142/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Valéria Tavares Pita</td>
+    <td class="td5">18.222.132/0001-23</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">20/06/2013 </td>
+    <td class="td9">20/12/2013 </td>
+    <td class="td10">Contratação de serviços profissionais da área de contabilidade para executar trabalhos de apoio técnico à Gerência de Contabilidade - GECONT</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">10/2013</td>
+	<td class="td?"> 2048/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">COMPEX TECNOLOGIA LTDA</td>
+    <td class="td5">03.391.625/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">19/06/2013 </td>
+    <td class="td9">15/07/2013 </td>
+    <td class="td10">Contratação de Empresa para realizar serviços de manutenção corretiva nos coletores de dados utilizados nas Unidades Portuárias da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">09/2013</td>
+	<td class="td?"> 1835/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Antônio Paulo de Brito Bastos</td>
+    <td class="td5">934.895.012-68</td>
+    <td class="td6">RESCINDIDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">06/06/2013 </td>
+    <td class="td9">05/02/2014 </td>
+    <td class="td10">Contratação de serviços profissionais para auxiliar a Supervisão de Contas a Pagar - SUPCOP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2013</td>
+	<td class="td?"> 1830/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SANSEVIERIA CONSULTORIA AMBIENTAL E PAISAGISMO LTDA</td>
+    <td class="td5">15.001.344/0001-92</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">03/06/2013 </td>
+    <td class="td9">02/06/2014 </td>
+    <td class="td10">Prestação de serviços de revitalização e manutenção dos jardins localizados no Edifício Sede e Prédio do Almoxarifado da CDP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">07/2013</td>
+	<td class="td?"> 1719/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">REGINA C. N. SOUZA - ME</td>
+    <td class="td5">02.055.122/0001-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">03/06/2013 </td>
+    <td class="td9">02/06/2014 </td>
+    <td class="td10">Prestação de serviços de confecção de cópias de chaves, consertos de fechaduras com troca de segredo e outros serviços relacionados à fechadura, confecção de carimbos e amolação de ferramentas.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2013</td>
+	<td class="td?"> 1790/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PEDRO SANTA BRÍGIDA CARRILHO</td>
+    <td class="td5">187.329.842-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">23/05/2013 </td>
+    <td class="td9">22/05/2014 </td>
+    <td class="td10">Prestação de serviço de manutenção do relógio de quatro faces do Ed. Sede da Companhia Docas do Pará.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2013</td>
+	<td class="td?"> 1681/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">COMPEX TECNOLOGIA LTDA</td>
+    <td class="td5">03.391.625/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">16/05/2013 </td>
+    <td class="td9">30/05/2013 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva de 07 (sete) coletores de dados de uso operacional nos Portos da CDP, conforme o que consta no Processo CDP de nº 1681/2013 de 10.05.2013.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2013</td>
+	<td class="td?"> 1475/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">MASS ENGENHARIA LTDA - ME</td>
+    <td class="td5">09.384.864/0001-29</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">29/04/2013 </td>
+    <td class="td9">13/05/2013 </td>
+    <td class="td10">Contratação de Empresa para realizar serviços de cabeamento estruturado (instalação de 18 pontos de rede categoria 5e) para funcionamento, temporário, da Receita Federal no Espaço Influenza da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2013</td>
+	<td class="td?"> 1359/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">AEP CONSULTORIA EMPRESARIAL E FISCAL LTDA</td>
+    <td class="td5">13.500.720/000-68</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">22/04/2013 </td>
+    <td class="td9">20/06/2013 </td>
+    <td class="td10">Contratação de serviços profissionais de assessoria e consultoria na área tributária a fim de realizar levantamento de processo de parcelamento junto à Receita Federal do Brasil</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2013</td>
+	<td class="td?"> 1291/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Christianne do Socorro de Moraes Paes</td>
+    <td class="td5">17.737.712/0001-90</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">09/04/2013 </td>
+    <td class="td9">08/10/2013 </td>
+    <td class="td10">Contratação de serviços profissionais para auxiliar os serviços da Supervisão de Material e Compra - SUPMAC.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2013</td>
+	<td class="td?"> 1277/2013</td>
+    <td class="td2">2013 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Bruno Leandro Machado Brito</td>
+    <td class="td5">16.678.003/0001-19</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">08/04/2013 </td>
+    <td class="td9">08/10/2013 </td>
+    <td class="td10">Contratação de serviços profissionais da área de Contabilidade para executar trabalhos de apoio técnico à Gerência de Contabilidade - GECONT.</td>
+    <td class="td11"> </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">25/2012</td>
+	<td class="td?"> 4030/2012 de 03.09.2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">ANTONIA JAMYLLE SOARES VIEIRA</td>
+    <td class="td5">14.228.161/0001-41</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">13/09/2012 </td>
+    <td class="td9">12/02/2013 </td>
+    <td class="td10">Prestação de serviços de Clipping Newsletter e cobertura jornalistica para CDP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">24/2012</td>
+	<td class="td?"> 4030/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">VALERIA TAVARES PITA</td>
+    <td class="td5">710.778.632-68</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">17/09/2012 </td>
+    <td class="td9">16/05/2013 </td>
+    <td class="td10">Prestação de profissional autonomo para atender a demanda de serviços da Supervisão de Patrimonio - SUPPAT da CDP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">23/2012</td>
+	<td class="td?"> 2884/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">COMPEX TECNOLOGIA LTDA</td>
+    <td class="td5">03.391.625/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">20/08/2012 </td>
+    <td class="td9">04/09/2012 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva nos coletores de dados de uso operacional nos Portos e Terminais da CDP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">21/2012</td>
+	<td class="td?"> 455.087.552-68</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">PAULO ALEX DOS REIS TRINDADE</td>
+    <td class="td5">455.087.552-68</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">09/07/2012 </td>
+    <td class="td9">08/01/2013 </td>
+    <td class="td10">Prestação de Serviços de Contratação de Profissional para prestar serviços na área administrativa da SUPMAC - CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">20/2012</td>
+	<td class="td?"> 2400/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">RONALDO MARTINS FURTADO</td>
+    <td class="td5">668.027.252-15</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">02/07/2012 </td>
+    <td class="td9">01/01/2013 </td>
+    <td class="td10">Prestação de serviços de Contratação de Profissional para prestar apoio Técnico como Respondente do Sistema de Informação ao cidadão - SIC da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">19/2012</td>
+	<td class="td?"> 2204/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">SAMILA GUSMÃO PEREIRA</td>
+    <td class="td5">895.355.022-04</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">09/07/2012 </td>
+    <td class="td9">08/10/2012 </td>
+    <td class="td10">Prestação de serviços de Técnicos na área de Recursos Humanos da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">18/2012</td>
+	<td class="td?"> 2204/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">tdIAGO DE JESUS CANTANHEDE BEZERRA</td>
+    <td class="td5">13.686.191/0001-01</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">06/06/2012 </td>
+    <td class="td9">05/01/2013 </td>
+    <td class="td10">Prestação de serviços de editoração, montagem de Layout e diagrama grafica da assessoria de comunicação da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">17/2012</td>
+	<td class="td?"> 1794/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">CENTRO MÉDICO E PSICOLOGICO DE BELÉM LTDA</td>
+    <td class="td5">13.044.882/0001-39</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">18/06/2012 </td>
+    <td class="td9">17/07/2012 </td>
+    <td class="td10">Prestação de serviços de avaliação psicológica para uso de arma de fogo para integrantes da Guarda Portuaria da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">16/2012</td>
+	<td class="td?"> 2133/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">MASTER CONSULTORIA E SISTEMAS DE SEGURANÇA LTDA</td>
+    <td class="td5">083.49430/0001-25</td>
+    <td class="td6">ATIVA</td>    
+    <td class="td7"> </td>
+    <td class="td8">15/06/2012 </td>
+    <td class="td9">14/06/2013 </td>
+    <td class="td10">Prestação de serviços de rastreamento e monitoramento veicular envolvendo sistema de trafego de informações GSM/GPRS da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">15/2012</td>
+	<td class="td?"> 519/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">S &amp; B COMÉCIO E SERVIÇOS LTDA</td>
+    <td class="td5">02.490.682/0001-93</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">01/06/2012 </td>
+    <td class="td9">31/05/2013 </td>
+    <td class="td10">Prestação de serviços de manutenção e troca das gravações do sistema de espera telefonica digital das 05 centrais telefonicas em funcionamento na CDP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">14/2012</td>
+	<td class="td?"> 1921/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Regina C. N. Souza - ME</td>
+    <td class="td5">02.055.122/0001-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">01/06/2012 </td>
+    <td class="td9">31/05/2013 </td>
+    <td class="td10">Contratação de serviços de serviços de confecções de cópia de chave, conserto de fechaduras com troca de segredo e outros serviços relacionados a fechadura, confecção de carimbos e amolação de ferramentas solicitadoas pela Supervisão de serviços Gerais - SUPSEG.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">13/2012</td>
+	<td class="td?"> 1871/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Pedro Santa Brigida Carvalho</td>
+    <td class="td5">187.329.842-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">23/05/2012 </td>
+    <td class="td9">22/05/2013 </td>
+    <td class="td10">Contratação de serviços de manutenção e funcionamento do relógio do Edificio Sede da Companhia Docas do Pará.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">10/2012</td>
+	<td class="td?"> 1522/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Camila Rodrigues de Figueiredo</td>
+    <td class="td5">15.233.395/0001-40</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">20/04/2012 </td>
+    <td class="td9">19/12/2012 </td>
+    <td class="td10">Contratação de empresas prestadoras de serviços especializados em Assesoria de Eventos incluindo serviços de conbertura total, Check list, solicitação de seviços gerais e estimativos contato com fornecedores e empresa tercerizada e apoio nos eventos da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">09/2012</td>
+	<td class="td?"> 1101/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">FREDLOG SERVIÇOS DE ENTREGA LTDA - ME</td>
+    <td class="td5">13.212.738/0001-64</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">02/04/2012 </td>
+    <td class="td9">01/08/2012 </td>
+    <td class="td10">Contratação de serviços especializados na busca de entrega de documentos e objetos atraves de moto - boy (moto - frete) para à CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2012</td>
+	<td class="td?"> CI/ASSCOM nº 49/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3"> </td>
+    <td class="td4">Antônia Jamylle Soares Vieira</td>
+    <td class="td5">923.625.592-20</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">12/03/2012 </td>
+    <td class="td9">11/09/2012 </td>
+    <td class="td10">Contratação dos serviços de confecção de Clipping, redação de Newsletter e cobertura jornalística e fotográfica de eventos da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">07/2012</td>
+	<td class="td?"> 725/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3"> </td>
+    <td class="td4">COMPEX TECNOLOGIA LTDA</td>
+    <td class="td5">03.391.625/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">24/02/2012 </td>
+    <td class="td9">09/03/2012 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva de 10 coletores de dados de uso operacional nos Portos da CDP</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2012</td>
+	<td class="td?"> 752/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">RP TREINAMENTO E DESENVOLVIMENTO</td>
+    <td class="td5">07.969.794/0001-45</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">28/02/2012 </td>
+    <td class="td9">03/03/2012 </td>
+    <td class="td10">Prestação de serviços de Consultoria especializada na aplicabilidade imediata das normas internacionais de Contabilidade segundo as orientações do Comitê de Pronuciamento Contabil da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2012</td>
+	<td class="td?"> 642/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Danielle de Souza Moura</td>
+    <td class="td5">761.019.592-87</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">23/02/2012 </td>
+    <td class="td9">22/05/2012 </td>
+    <td class="td10">Prestação de serviços de profissionais da área de Contabilidade para execultar trabalhos de apoio Técnico à Gerencia de Contabilidade - GECONT.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2012</td>
+	<td class="td?"> 091/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Nelio Augusto Dantas Elias</td>
+    <td class="td5">146.513.192-20</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">22/02/2012 </td>
+    <td class="td9">21/04/2012 </td>
+    <td class="td10">Prestação de serviços de Auditoria Contabil para proceder o exame e emitir parecer de Auditoria Interna - GERAUD, sobre demostração financeira da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2012</td>
+	<td class="td?"> 184/2012</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Mmarrate Engenharia e Locação</td>
+    <td class="td5">07.141.293/0001-76</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">13/01/2012 </td>
+    <td class="td9">01/02/2012 </td>
+    <td class="td10">Prestação de serviços de infra- estrutura de fibra ótica no terminal portuário de Outeiro.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2012</td>
+	<td class="td?"> 4579/2011</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Maria de Nazare Vieira Soares</td>
+    <td class="td5">024.018.342-72</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">05/01/2012 </td>
+    <td class="td9">11/02/2012 </td>
+    <td class="td10">Prestação de serviços profissionais de Consultoria na área Administrativa - Financeira setor responsavel - GECONT</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2012</td>
+	<td class="td?"> 4559/2011</td>
+    <td class="td2">2012 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Luciana Amorim Cunha</td>
+    <td class="td5">756.823.382/00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">05/01/2012 </td>
+    <td class="td9">04/04/2012 </td>
+    <td class="td10">Prestação de serviços na área de Psicologia Organizacional ref à execução de trabalhos de apoio Técnico à Supervisão de Capacitação da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+
+<tr>
+    <td class="td0"></td>
+    <td class="td1">17/2011</td>
+	<td class="td?"> 4227/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">tdiago de Jesus Cantanhede Bezerra Almeida</td>
+    <td class="td5">13.686.119/0001-01</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40878 </td>
+    <td class="td9"> 41059</td>
+    <td class="td10">Prestação dos serviços de editoração, montagem de Layout e diagrama para auxiliar a Assessoria de Comunicação - ASSCOM</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">16/2011</td>
+	<td class="td?"> CI/GECONT Nº 86/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Danielle de Souza Moura</td>
+    <td class="td5">761.019.592-87</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40869 </td>
+    <td class="td9"> 40959</td>
+    <td class="td10">Prestação de serviços de Contabilidade para executar trabalhos de apoio Técnico à Gerência de Contabilidade -&nbsp;&nbsp;GECONT</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">15/2011</td>
+	<td class="td?"> 3647/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Adalberto Alves do Nascimento Júnior</td>
+    <td class="td5">428.525.366-68</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40841&nbsp;&nbsp;&nbsp;</td>
+    <td class="td9"> 29/10/2011</td>
+    <td class="td10">Prestação de serviços de capacitação gerencial e suporte técnico à Diretoria - Financeira - DIRAFI </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">14/2011</td>
+	<td class="td?"> 3347/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Interton Comércio Ltda</td>
+    <td class="td5">00.96806/0001-78</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40829 </td>
+    <td class="td9"> 41194</td>
+    <td class="td10">Prestação de manutenção preventiva e corretiva e assistência técnica a serem executadas pela contratada na impresssora Sharp AL1641, tombamento 7845</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">13/2011</td>
+	<td class="td?"> 3470/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Luciana Amorim Cunha</td>
+    <td class="td5">756.823.382-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40821 </td>
+    <td class="td9"> 40912</td>
+    <td class="td10">Prestação de serviços de Psicologia Organizacional, visando dar suporte técnico à Supervisão de Treinamento, Capacitação e Relações Humanas&nbsp;&nbsp;- SUPTRE </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">12/2011</td>
+	<td class="td?">&nbsp;&nbsp;3354/2011 </td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">FOP LEÃO</td>
+    <td class="td5">15.312.259/0001-45</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40815 </td>
+    <td class="td9"> 40830</td>
+    <td class="td10">Contratação dos serviços de reparo do Ed. Sede da CDP para as festividades do Círio de Nazaré 2011</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">11/2011</td>
+	<td class="td?"> 3364/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Antônia Jamylle Soares Vieira </td>
+    <td class="td5">923.625.592-20</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40799 </td>
+    <td class="td9"> 40951</td>
+    <td class="td10">Contratação dos serviços de produção e redação de newsletter, confecção de clipping e cobertura jornalística e fotográfica de eventos da CDP para auxiliar a ASSCOM desta Companhia</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">10/2011</td>
+	<td class="td?">&nbsp;&nbsp;2504/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">tdiago de Jesus Cantanhede Bezerra Almeida</td>
+    <td class="td5">527.981.512-87</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40695</td>
+    <td class="td9"> 40877</td>
+    <td class="td10"> </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">09/2011</td>
+	<td class="td?">&nbsp;&nbsp;2417/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Marilza P. Viana</td>
+    <td class="td5">09.538.055/0001-24</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">Dia 11/07/2011&nbsp;&nbsp;</td>
+    <td class="td9">Dia 13/07/2011 Dia 02/08/2011 Dia 11/07/2011&nbsp;&nbsp;Dia 13/07/2011 Dia 02/08/2011 </td>
+    <td class="td10"> </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">08/2011</td>
+	<td class="td?"> 2343/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Carmen do Socorro Viana da Silva</td>
+    <td class="td5">508.445.982-91</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40735 </td>
+    <td class="td9"> 40796</td>
+    <td class="td10">Contratação excepcional, pelo período de 02 (dois) meses de uma consultoria e assessoria de contabilidade, para dar apoio à Diretoria Administrativa Financeira&nbsp;&nbsp;- DIRAFI e a Gerência de Contabilidade – GECONT da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">07/2011</td>
+	<td class="td?"> </td>
+    <td class="td2">2011 </td>
+    <td class="td3"> -</td>
+    <td class="td4"> -</td>
+    <td class="td5"> -</td>
+    <td class="td6">CANCELADA</td>    
+    <td class="td7"> </td>
+    <td class="td8"> - -</td>
+    <td class="td9"> </td>
+    <td class="td10"> - </td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">06/2011</td>
+	<td class="td?"> CI/SUPSEG Nº 53/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Regina C. N. Souza - ME</td>
+    <td class="td5">02.055.122/0001-00</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40695 </td>
+    <td class="td9">41060 </td>
+    <td class="td10">Prestação de serviços de confecção de cópias de chaves, conserto de fechaduras com troca de segredo e outros serviços relacionados a fechaduras, confecção de carimbos e amolação de ferramentas, a serem solicitados pela Supervisão de Serviços Gerais – SUPSEG.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">05/2011</td>
+	<td class="td?">&nbsp;&nbsp;952/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">COMPEX Tecnologia Ltda</td>
+    <td class="td5">03.391.625/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40630 </td>
+    <td class="td9"> 40645</td>
+    <td class="td10">Prestação de serviços de manutenção corretiva de 10 (dez) coletores de dados de uso operacional nos Portos da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">04/2011</td>
+	<td class="td?">&nbsp;&nbsp;420/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">Carmem do Socorro da Silva Viana</td>
+    <td class="td5">508.445.982-91</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40575 </td>
+    <td class="td9"> 40663</td>
+    <td class="td10">Prestação de serviços de auditoria contábil para dar assessoramento à Gerência de Auditoria Interna – GERAUD da CDP.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">03/2011</td>
+	<td class="td?"> 292/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3"> </td>
+    <td class="td4">S &amp; B Comércio e Serviços Ltda</td>
+    <td class="td5">02.490.682/0001-93</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40575 </td>
+    <td class="td9">40939 </td>
+    <td class="td10">Prestação de serviços de manutenção e troca das gravações do sistema de espera da central telefônica digital, com troca de 8 (oito) gravações no período de um ano.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">02/2011</td>
+	<td class="td?"> CI/GECONT Nº072/2010</td>
+    <td class="td2">2011 </td>
+    <td class="td3"> </td>
+    <td class="td4">Easy Serviços Contábeis Ltda</td>
+    <td class="td5">126.215.60/0001-42</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40558 </td>
+    <td class="td9"> 40678</td>
+    <td class="td10">Prestação de serviços contábeis.</td>
+    <td class="td11"> </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">01/2011</td>
+	<td class="td?"> CI/GERTIN Nº 02/2011</td>
+    <td class="td2">2011 </td>
+    <td class="td3">DISPENSA DE LICITAÇÃO</td>
+    <td class="td4">COMPEX Tecnologia Ltda</td>
+    <td class="td5">03.391.625/0001-10</td>
+    <td class="td6">CONCLUÍDA</td>    
+    <td class="td7"> </td>
+    <td class="td8">40571 </td>
+    <td class="td9">40586 </td>
+    <td class="td10">Prestação de serviços de manutenção corretiva e evolutiva de 09 (nove) coletores de dados de uso operacional nos Portos de CDP.</td>
+    <td class="td11"> </td>
+</tr>
+
+    </tbody>
+    </table>
+    </div>
+                        
+    </div>
+    </div>
+    </div>
+    </div>
+          
+    <footer class="footer">
+        <div class="container ">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <p style="color:white"> Companhia Docas do Pará - CDP </br>Av.Presidente Vargas, 41, CEP 66010-000, Belém - Pará - Brasil
+            </br> Tel: (91) 3182-9000 | CNPJ: 04.933.552/0001-03 </p>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <img src="img/logo.png" width="250px">
+
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    
+    <!-- jQuery -->
+    <!-- Booststrap -->
+    <!-- DataTable -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="js/pace.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        var table = $('#tab1').DataTable({
+            responsive: true,
+            dom: 'Bfrtip',
+        buttons: [ { extend: 'excelHtml5',
+            autoFilter: true,
+            sheetName: 'Exported data',
+        },
+            {
+                extend: 'pdfHtml5',
+                download: 'open',
+                 orientation: 'landscape',
+                pageSize: 'LEGAL',
+                customize: function ( doc ) {
+                    doc.content.splice( 1, 0, {
+                        margin: [ 0, 0, 0, 12 ],
+                        alignment: 'center',
+                        image: 'data:image/png;base64,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'
+                    } );
+                }
+            }
+
+        ],
+            order: [
+                [3, 'asc']
+            ],
+
+            rowGroup: {
+                dataSrc: 3,
+            },
+
+            "columnDefs": [{
+                    "targets": [3],
+                    "visible": false,
+                }
+
+
+            ],
+
+            "ordering": false,
+
+            "language": {
+                "lengthMenu": "Exibição de _MENU_ registros por página",
+                "zeroRecords": "Não encontrado - desculpa",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponível",
+                "infoFiltered": "(filtrado de _MAX_ total de registros)",
+                "search": "Procurar:",
+                "paginate": {
+                    "first": "Primeiro",
+                    "last": "Último",
+                    "next": "Próximo",
+                    "previous": "Anterior"
+                }
+
+            }
+        });
+
+
+    });
+
+</script>
+    
+</body>
+</html>

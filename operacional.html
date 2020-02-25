@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="datatables/datatables.min.css" >
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/pace.css">
+
+    <title>CDP - Operacional</title>
+
+    <style> 
+    /*modalidade
+    ------------*/
+    .td3 {
+        text-transform: uppercase;
+    }
+    /*contratado
+    ------------*/
+    .td5 {
+        text-transform: uppercase;
+        text-align: left;
+        white-space: normal !important;
+    }
+    /*cnpj
+    ------------*/
+    .td6 {
+        white-space: nowrap !important;
+    }
+
+
+    @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+    }
+    @-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+
+    .fadeTable {
+    opacity:0;
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;}
+
+    .fadeTable-delay {    
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -o-animation-delay:1s;
+    animation-delay:1s;}
+
+    </style>
+    
+</head>
+
+<body>
+    
+    <header> 
+ 
+        <nav class="nav-first navbar navbar-expand-md ">
+            <div class="container d-flex justify-content-around">           
+                <div>
+                        <a href="#" class="navbar-brand"> <img src="img/logo.png" width="250px"> </a>
+                </div> 
+                <div style="padding-left: 40px !important;">
+                        <a href="#" class="navbar-brand" > <img src="img/acesso.png" width="50%"> </a>
+                </div>
+            </div> 
+        </nav>
+
+        <nav class="nav-second navbar navbar-expand-md">
+            <div class="container ">
+                <button class="navbar-toggler navbar-light bg-light" data-toggle="collapse" data-target="#nav-third"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                <div class=" fill collapse navbar-collapse" id="nav-third">
+                        <ul class=" navbar-nav align-items-center">
+                            <li class="nav-item "> <a href="index.html" class="nav-link pageactive ">Obras e Serviços</a> </li>
+                            <li class="nav-item "> <a href="credenciamento.html" class="nav-link">Credenciamento</a> </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ASD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Autorização de Serviço
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="ASD">
+                                  <a class="dropdown-item" href="dirafi.html">Diretoria Administrativa Financeira</a>
+                                  <a class="dropdown-item" href="direxe.html">Diretoria Executiva</a>
+                                  <a class="dropdown-item" href="dirgep.html">Diretoria de Gestão Portuária</a>
+                                  <a class="dropdown-item" href="dirpre.html">Diretoria da Presidência</a>
+                                </div>
+                            </li>
+                            <li class="nav-item "> <a href="arrendamento.html" class="nav-link">Arrendamento</a> </li>
+                            <li class="nav-item "> <a href="cessão de uso.html" class="nav-link">Cessão de Uso</a> </li>
+                            <li class="nav-item "> <a href="operacional.html" class="nav-link">Operacional</a> </li>
+                        </ul>
+                    </div>
+            </div> 
+        </nav>
+
+    </header> 
+
+    <nav> 
+        <div class="container"> 
+        <div class="row">
+        <div class="col-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"> <a href="#">Acesso a Informação</a> </li>
+                <li class="breadcrumb-item"> <a href="#">Licitações e Contratos</a> </li>
+                <li class="breadcrumb-item active">Obras e Serviços</li>
+            </ol>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <p class="descricao1 text-justify">Nessa seção são divulgados os contratos realizados pela Companhia Docas do Pará.</p>
+                
+    </div>
+    </div>  
+    <div class="row">
+    <div class="col-lg-7 col-sm-12">
+        <table class="descricao2 table table-sm text-left" style="color: #555555;">
+            <caption class="text-success">Atualizado em 26/06/2019</caption>
+            <tbody>
+                <tr>
+                    <th scope="row" style="border-top:#fff">I</th>
+                    <td style="border-top:#fff">ÓRGÃO SUPERIOR: MINISTÉRIO DA INFRAESTRUTURA</td>
+                </tr>
+                <tr>
+                    <th scope="row">II</th>
+                    <td>ÓRGÃO SUBORDINADO: COMPANHIA DOCAS DO PARÁ </td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row">III</th>
+                    <td>UNIDADE GESTORA: GERÊNCIA DE RELAÇÕES COMERCIAIS E GESTÃO DE CONTRATOS </td>
+                </tr>
+            </tbody>
+        </table>       
+    </div>
+    </div>   
+    </div>
+
+    <div class="container"> 
+    <div class="row">
+    <div class="col-lg-8 col-sm-12">
+    <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+        <div style="font-family: 'proximanovacondensed';">Como encontrar informações na tabela</div>
+    </button>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Pesquise por: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+                <div class="modal-body"> Número do contrato </br> Número do processo </br> Nome da empresa </br>
+                    Modalidade </br> Parte do objeto </br> Nome do Fiscal </br> Situação do contrato
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="fadeTable fadeTable-delay">
+    <table class="display responsive nowrap" id="tab1" align="center" style="width:100%;" data-page-length="25">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th data-priority="1">
+                CONTRATO
+            </th>
+            <th>ANO</th>
+            <th>
+                PROCESSO</th>
+            
+                <th>MODALIDADE</th>
+               <th data-priority="2">CONTRATADO</th>
+            <th>
+                CNPJ</th>
+            <th>SITUAÇÃO</th>
+    
+            <th>
+                FISCAL</th>
+            <th>
+                INICIO</th>
+            <th>
+                TERMINO</th>
+                <th>OBJETO</th>
+                <th>CONTRATOS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Obras e serviços 2019 -->
+<tr>
+    <td class="td0">&nbsp;</td>
+    <td class="td1">Contrato de Autorização de Passagem Mediante Pista de Rolamento</td>
+    <td class="td2">2019</td>
+    <td class="td3">2829/2018</td>
+    <td class="td4">Contrato de Autorização de Passagem Mediante Pista de Rolamento</td>
+    <td class="td5">TRANSPORTE BERTOLINI LTDA.</td>
+    <td class="td6">04.503.660/001-46</td>
+    <td class="td11">ATIVO</td>
+    <td class="td8"> </td>
+    <td class="td9">26/02/2019</td>
+    <td class="td10">27/02/2029</td>
+    <td class="td7">Autorização de passagem empreendida por pista de rolamento que iniciará os limites do Porto de Itaituba até o berço, compreendendo uma área de trajeto de 450 mts de comprimento x 15 mts de largura, totalizando em 6.750m² de área.</td>
+    <td class="td12"> </td>
+</tr>
+
+<tr>
+    <td class="td0">&nbsp;</td>
+    <td class="td1">09/2014</td>
+    <td class="td2">2014</td>
+    <td class="td3">4660/2012</td>
+    <td class="td4">Contrato de Autorização de Passagem</td>
+    <td class="td5">PETRÓLEO DA AMAZONIA LTDA - PETRO AMAZON</td>
+    <td class="td6">84.634.682/0006-99</td>
+    <td class="td11">ATIVO</td>
+    <td class="td8"> </td>
+    <td class="td9">24/09/2014</td>
+    <td class="td10">24/09/2039</td>
+    <td class="td7">Autorização de passagem de tubulação oriunda das instalações localizadas em terrno próprio da PETRO AMAZON, interliando-as ao Terminal Petroquímico de Miramar.</td>
+    <td class="td12">
+        <p><a href="https://www.cdp.com.br/documents/10180/47149587/MIRAMAR_PETROAMAZON.pdf/6ef30a1b-5d19-4faf-a424-dea82113a9e2" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+
+
+    </tbody>
+    </table>
+
+    </div>                    
+    </div>
+    </div>
+    </div>
+    </div>
+          
+    <footer class="footer">
+        <div class="container ">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <p style="color:white"> Companhia Docas do Pará - CDP </br>Av.Presidente Vargas, 41, CEP 66010-000, Belém - Pará - Brasil
+            </br> Tel: (91) 3182-9000 | CNPJ: 04.933.552/0001-03 </p>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <img src="img/logo.png" width="250px">
+
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    
+    <!-- jQuery -->
+    <!-- Booststrap -->
+    <!-- DataTable -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="js/pace.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        var table = $('#tab1').DataTable({
+            responsive: true,
+            dom: 'Bfrtip',
+        buttons: [ { extend: 'excelHtml5',
+            autoFilter: true,
+            sheetName: 'Exported data',
+        },
+            {
+                extend: 'pdfHtml5',
+                download: 'open',
+                 orientation: 'landscape',
+                pageSize: 'LEGAL',
+                customize: function ( doc ) {
+                    doc.content.splice( 1, 0, {
+                        margin: [ 0, 0, 0, 12 ],
+                        alignment: 'center',
+                        image: 'data:image/png;base64,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'
+                    } );
+                }
+            }
+
+        ],
+            order: [
+                [2, 'asc']
+            ],
+
+            rowGroup: {
+                dataSrc: 2,
+            },
+
+            "columnDefs": [{
+                    "targets": [2],
+                    "visible": false,
+                }
+
+
+            ],
+
+            "ordering": false,
+
+            "language": {
+                "lengthMenu": "Exibição de _MENU_ registros por página",
+                "zeroRecords": "Não encontrado - desculpa",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponível",
+                "infoFiltered": "(filtrado de _MAX_ total de registros)",
+                "search": "Procurar:",
+                "paginate": {
+                    "first": "Primeiro",
+                    "last": "Último",
+                    "next": "Próximo",
+                    "previous": "Anterior"
+                }
+
+            }
+        });
+
+
+    });
+
+</script>
+    
+</body>
+</html>

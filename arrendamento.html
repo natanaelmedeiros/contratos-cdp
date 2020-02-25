@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="datatables/datatables.min.css" >
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/pace.css">
+
+    <title>CDP - Arrendamento</title>
+
+    <style> 
+
+    /*modalidade
+    ------------*/
+    .td3 {
+    text-transform: uppercase;
+    text-align: left;
+    }
+    /*contratado
+    ------------*/
+    .td4 {
+        text-transform: uppercase;
+        text-align: left;
+        white-space: nowrap !important;
+    }
+    /*cnpj
+    ------------*/
+    .td4, .td6 {
+        white-space: nowrap !important;
+    }
+    
+
+    @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+    }
+    @-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+
+    .fadeTable {
+    opacity:0;
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;}
+
+    .fadeTable-delay {    
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -o-animation-delay:1s;
+    animation-delay:1s;}
+
+    </style>
+    
+</head>
+
+<body onload="myFunction()">
+    
+    <header> 
+ 
+        <nav class="nav-first navbar navbar-expand-md ">
+            <div class="container d-flex justify-content-around">           
+                <div>
+                        <a href="#" class="navbar-brand"> <img src="img/logo.png" width="250px"> </a>
+                </div> 
+                <div style="padding-left: 40px !important;">
+                        <a href="#" class="navbar-brand" > <img src="img/acesso.png" width="50%"> </a>
+                </div>
+            </div> 
+        </nav>
+
+        <nav class="nav-second navbar navbar-expand-md">
+            <div class="container ">
+                <button class="navbar-toggler navbar-light bg-light" data-toggle="collapse" data-target="#nav-third"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                <div class=" fill collapse navbar-collapse" id="nav-third">
+                        <ul class=" navbar-nav align-items-center">
+                            <li class="nav-item "> <a href="index.html" class="nav-link pageactive ">Obras e Serviços</a> </li>
+                            <li class="nav-item "> <a href="credenciamento.html" class="nav-link">Credenciamento</a> </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ASD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Autorização de Serviço
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="ASD">
+                                  <a class="dropdown-item" href="dirafi.html">Diretoria Administrativa Financeira</a>
+                                  <a class="dropdown-item" href="direxe.html">Diretoria Executiva</a>
+                                  <a class="dropdown-item" href="dirgep.html">Diretoria de Gestão Portuária</a>
+                                  <a class="dropdown-item" href="dirpre.html">Diretoria da Presidência</a>
+                                </div>
+                            </li>
+                            <li class="nav-item "> <a href="arrendamento.html" class="nav-link">Arrendamento</a> </li>
+                            <li class="nav-item "> <a href="cessão de uso.html" class="nav-link">Cessão de Uso</a> </li>
+                            <li class="nav-item "> <a href="operacional.html" class="nav-link">Operacional</a> </li>
+                        </ul>
+                    </div>
+            </div> 
+        </nav>
+
+    </header> 
+
+    <nav> 
+        <div class="container"> 
+        <div class="row">
+        <div class="col-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"> <a href="#">Acesso a Informação</a> </li>
+                <li class="breadcrumb-item"> <a href="#">Licitações e Contratos</a> </li>
+                <li class="breadcrumb-item active">Obras e Serviços</li>
+            </ol>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <p class="descricao1 text-justify">Nessa seção são divulgados os contratos realizados pela Companhia Docas do Pará.</p>
+                
+    </div>
+    </div>  
+    <div class="row">
+    <div class="col-lg-7 col-sm-12">
+        <table class="descricao2 table table-sm text-left" style="color: #555555;">
+            <caption class="text-success">Atualizado em 26/06/2019</caption>
+            <tbody>
+                <tr>
+                    <th scope="row" style="border-top:#fff">I</th>
+                    <td style="border-top:#fff">ÓRGÃO SUPERIOR: MINISTÉRIO DA INFRAESTRUTURA</td>
+                </tr>
+                <tr>
+                    <th scope="row">II</th>
+                    <td>ÓRGÃO SUBORDINADO: COMPANHIA DOCAS DO PARÁ </td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row">III</th>
+                    <td>UNIDADE GESTORA: GERÊNCIA DE RELAÇÕES COMERCIAIS E GESTÃO DE CONTRATOS </td>
+                </tr>
+            </tbody>
+        </table>       
+    </div>
+    </div>   
+    </div>
+
+    <div class="container"> 
+    <div class="row">
+    <div class="col-lg-8 col-sm-12">
+    <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+        <div style="font-family: 'proximanovacondensed';">Como encontrar informações na tabela</div>
+    </button>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Pesquise por: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+                <div class="modal-body"> Número do contrato </br> Número do processo </br> Nome da empresa </br>
+                    Modalidade </br> Parte do objeto </br> Nome do Fiscal </br> Situação do contrato
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="fadeTable fadeTable-delay">
+    <table class="display responsive nowrap" id="tab1" align="center" style="width:100%;" data-page-length="25">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th data-priority="1">CONTRATO</br>
+            <th>PROCESSO</th>
+            <th data-priority="2">CONTRATADO</th>
+            <th>CNPJ</th>
+            <th>SITUAÇÃO</th>
+            <th>FISCAL</th>
+            <th>ÍNICIO</th> 
+            <th>TÉRMINO</th>
+            <th>OBJETO</th>
+            <th>CONTRATO DE TRANSIÇÃO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Obras e serviços 2019 -->
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição n.º 02</td>
+    <td class="td2">207/2019</td>
+    <td class="td3">Petrobrás Distribuidora S/A – Antiga CBPI</td>
+    <td class="td4">34.274.233/0001-02</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6"> APOMIR RESOLUÇÃO DIRGEP Nº 20/2019</td>
+    <td class="td7">12/03/2019</td>
+    <td class="td8">08/09/2019</td>
+    <td class="td9">Arrendamento de área de 21.560 m2, situado em Miramar, conforme plantas anexas que assinadas pelas partes ficam fazendo parte integrante deste contrato.</td>
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição nº 10</td>
+    <td class="td2">208/2019</td>
+    <td class="td3">Liquigás Distribuidora S/A</td>
+    <td class="td4">60.886.413/0001-47</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6"> APOMIR RESOLUÇÃO DIRGEP Nº 18/2019</td>
+    <td class="td7">06/03/2019</td>
+    <td class="td8">01/09/2019</td>
+    <td class="td9">Arrendamento Transitório à Liquigás de uma área dentro do Porto Organizado de Belém (Miramar) com 32.510,00 m², na qual se encontra instalado um terminal para armazenagem e ovimentação de Gás Liquefeito de Petróleo.</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição nº 09</td>
+    <td class="td2">2047/2018</td>
+    <td class="td3">LIQUIGÁS DISTRIBUIDORA S/A</td>
+    <td class="td4">60.886.413/0001-47</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOMIR RESOLUÇÃO DIRGEP Nº 41/2018</td>
+    <td class="td7">06/09/2018 </td>
+    <td class="td8">04/03/2019 </td>
+    <td class="td9">Arrendamento Transitório à Liquigás de uma área dentro do Porto Organizado de Belém (Miramar) com 31.905,79 m², na qual se encontra instalado um terminal para armazenagem e ovimentação de Gás Liquefeito de Petróleo.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%2008+-+Liquig%C3%A1s+-+parte+1.pdf/e46d5239-3629-4d3a-8461-9930f9d41570" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 08 - LIQUIGÁS PARTE1</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%2008+-+Liquig%C3%A1s+-+parte+2.pdf/88ec0177-7635-473d-bd60-f283dc5d78a2" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 08 - LIQUIGÁS PARTE2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%2009+-+LIQUIG%C3%81S+PARTE1.pdf/7e5b4251-2a34-4d8c-8ea5-a23e945411f8" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 09 - LIQUIGÁS PARTE1</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%2009+-+LIQUIG%C3%81S+PARTE2.pdf/026bad39-610f-41c1-a4b5-d35284c9fe44" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 09 - LIQUIGÁS PARTE2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%201.pdf/b4a00fdf-5f92-414b-b00e-4bcab43acdc3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 1</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%202.pdf/a8e737cd-0b36-4e5b-ac7b-8f074b24bba3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%203.pdf/3acff8d2-70c4-44b4-8912-3ab528518312" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 3</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%204.pdf/4dc15045-9759-43a1-bbef-4a164fccbd35" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 4</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%205.pdf/5e533fc7-5900-4831-a9b0-7257ae0645ef" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 5</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%206.pdf/fb22374a-9f11-4f15-b5cb-33d37b3d0e67" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 6</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%207.pdf/d94b043a-f887-4630-bbc0-28171eb6292b" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 7</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138338/CONTRATO+LIQUIGAS.+ESCRITURA+P%C3%9ABLICA.pdf/7b93f6bd-7561-4153-b85b-38339ed3ef8c" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO LIQUIGAS. ESCRITURA PÚBLICA</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição Nº 08</td>
+    <td class="td2">206/2019</td>
+    <td class="td3">IPIRANGA PRODUTOS DE PETRÓLEO</td>
+    <td class="td4">33.337.122/0001-27</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6"> </td>
+    <td class="td7">15/02/2019 </td>
+    <td class="td8">13/08/2019 </td>
+    <td class="td9">Arrendamento transitório de área de correspondente a 24.787,02 m², dentro da área do Porto Organizado de Belém, onde se encontra instalada a Base de Distribuição de Combustíveis da rrendatária transitória, destinada ao recebimento, armazenamento e expedião de insflamáveis líquidos a granel de sua propriedade.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%201+IPIRANGA.pdf/fc726c45-03dd-4859-8aed-32953975a481" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 1 IPIRANGA</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%202+IPIRANGA.pdf/da89a949-311d-4acc-8973-51ef11ccb3c5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 2 IPIRANGA</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%203+IPIRANGA.pdf/96a692e3-59ae-459a-983b-62604476a0f7" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 3 IPIRANGA</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%204+IPIRANGA.pdf/3335434e-2b8d-41f9-a049-9e9d784a5caf" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 4 IPIRANGA</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%205+IPIRANGA.pdf/889964ce-3bb5-4f2a-a78b-62acf2016117" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 5 IPIRANGA</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%206+IPIRANGA.pdf/e858ebb5-c6e3-4b7e-b973-3818a8305445" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 6 IPIRANGA</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%B0%207+IPIRANGA.pdf/db28da93-6fef-417a-be8e-8ce45e1b01ed" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO N° 7 IPIRANGA</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138333/CONTRATO+IPP+MIRAMAR.pdf/807856f9-8502-4e13-ad23-0ba6c16e44c1" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO IPP MIRAMAR</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição n.º 08</td>
+    <td class="td2">3040/2018</td>
+    <td class="td3">PETROBRÁS DISTRIBUIDORA S/A – DISLEM</td>
+    <td class="td4">33.000.167/0001-01</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6"> </td>
+    <td class="td7">04/01/2019 </td>
+    <td class="td8">02/07/2019 </td>
+    <td class="td9">Arrendamento de área de 41.871,05 m2, situado em Miramar, conforme plantas anexas que assinadas pelas partes ficam fazendo parte integrante deste contrato.</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%201.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/3879356b-1121-4a2c-a798-46a4e9d41e4f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 1.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%202.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/50902ffa-79d9-44e7-8f5d-721943a40ee5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 2.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%203.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/397efbe0-6e0f-4f15-97f5-58ab6c54e85f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 3.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%204.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/1814497a-65a4-4d2d-b46e-2679a3bf1c2f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 4.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%205.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/c3fe9b37-c298-4d8b-a66f-f5b644c8af20" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 5.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%206.2018.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/30753f36-a2e8-416f-8c29-e1b6e1097f22" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 6.2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%207.2018.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM+-+PARTE+1.pdf/a8c78ec9-733b-41cf-aa1b-bac2a283c11b" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 7.2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%207.2018.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM+-+PARTE+2.pdf/28684d07-9b4e-4de0-9fec-cdfc004914e9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 7.2018 - PARTE 2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/ESCRITURA+P%C3%9ABLICA+PETROBRR%C3%81S+DISTRIBUIDORA+E+ADITIVOS+N%C2%B0%201+E+2.PDF/8ffda225-5eba-4f7f-b0b6-46ea63ed9a30" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ESCRITURA PÚBLICA PETROBRRÁS DISTRIBUIDORA E ADITIVOS N° 1 E 2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138703/TERMO+ADITIVO+N%C2%B0%203+-+ESCRITURA+P%C3%9ABLICA+PETROBRAS+DISTRIBUIDORA.pdf/2e5705c6-65cc-48cc-9fd8-59bbb43b6b7f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">TERMO ADITIVO N° 3</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição n.º 01</td>
+    <td class="td2">390/2018</td>
+    <td class="td3">PETROBRÁS DISTRIBUIDORA S/A – ANTIGA CBPI</td>
+    <td class="td4">34.274.233/0001-02</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOMIR RESOLUÇÃO DIRGEP Nº 33/2018</td>
+    <td class="td7">13/09/2018 </td>
+    <td class="td8">12/03/2019 </td>
+    <td class="td9">Arrendamento de área de 21.560 m2, situado em Miramar, conforme plantas anexas que assinadas pelas partes ficam fazendo parte integrante deste contrato.</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%201.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/50673e9e-eb42-4676-9f8f-82f93b422f24" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 1.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%202.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/f2c8d234-752c-4ca3-be28-347aae4a0ae9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 2.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%203.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/3fec250c-aaed-4979-81bd-c1026263ece5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 3.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%204.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/cdc52872-60e4-4553-af2c-39ea157f3fa8" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 4.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%205.2017.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/4e96954d-a341-4104-872e-4a1b2c9d94d7" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 5.2017</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%206.2018.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM.pdf/dc85557d-63d8-40ee-9f63-ecd12755522a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 6.2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%207.2018.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM+-+PARTE+1.pdf/5dd2d9a8-9e4a-4796-b657-0f7fbf2d6e35" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 7.2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%207.2018.+PETROBR%C3%81S+DISTRIBUIDORA.+DISLEM+-+PARTE+2.pdf/0b33ea30-9e08-46c4-bdc4-ac51a55390f7" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 7.2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/ESCRITURA+P%C3%9ABLICA+PETROBRR%C3%81S+DISTRIBUIDORA+E+ADITIVOS+N%C2%B0%201+E+2.PDF/dd1deb92-1522-404b-a2b5-0f5d93ba21f1" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">ESCRITURA PÚBLICA PETROBRRÁS DISTRIBUIDORA E ADITIVOS N° 1 E 2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138701/TERMO+ADITIVO+N%C2%B0%203+-+ESCRITURA+P%C3%9ABLICA+PETROBRAS+DISTRIBUIDORA.pdf/e660276e-77cc-4b78-ad92-680dccbb0bd5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">TERMO ADITIVO N° 3</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição n° 07</td>
+    <td class="td2">3091/2018</td>
+    <td class="td3">PETRÓLEO SABBÁ S/A (SUCESSORA DA COSAN COMBUSTÍVEIS LUBRIFICANTES S/A)</td>
+    <td class="td4">04.169.215/0001-91</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOMIR RESOLUÇÃO DIRGEP Nº 38/2018</td>
+    <td class="td7">08/01/2019 </td>
+    <td class="td8">06/07/2019 </td>
+    <td class="td9">Arrendamento transitório pela CDP à arrendatário transitória, da instação portuária correspondendo a 29.264,34 m², destinada ao recebimento, armazenamento e expedição de inflamáveis íquido a granel</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138865/CT+N%C2%BA%2001-2018+-+PETROLEO+SABBA+29.264%2C34.pdf/88d848db-e8c9-4153-b4ee-1b9dc2819542" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CT Nº 01-2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138865/CT+N%C2%BA%2002-2018+-+PETROLEO+SABBA+29.264%2C34.pdf/030a7a27-a307-4281-9cd0-e0ac52e51ce0" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CT Nº 02-2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138865/CT+N%C2%BA%2003-2018+-+PETROLEO+SABBA+29.264%2C34.pdf/bfb10f2a-11dd-4385-99e9-67c90958a1c0" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CT Nº 03-2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138865/CT+N%C2%BA%2004-2018+-+PETROLEO+SABBA+29.264%2C34.pdf/4488d3a6-1e9a-46c3-9312-63f28af89413" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CT Nº 04-2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138865/CT+N%C2%BA%2005-2018+-+PETROLEO+SABBA+29.264%2C34.pdf/74fbaa6d-59c4-499b-92cf-4d136c1f3854" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CT Nº 05-2018</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138865/CT+N%C2%BA%2006-2018+-+PETROLEO+SABBA+29.264%2C34.pdf/6792ff3a-aed8-4424-b069-7775bc902c46" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CT Nº 06-2018</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição n° 07</td>
+    <td class="td2">3091/2018</td>
+    <td class="td3">PETRÓLEO SABBÁ S/A (SUCESSORA DA COSAN COMBUSTÍVEIS LUBRIFICANTES S/A)</td>
+    <td class="td4">04.169.215/0001-91</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOMIR RESOLUÇÃO DIRGEP Nº 38/2018</td>
+    <td class="td7">08/01/2019 </td>
+    <td class="td8">06/07/2019 </td>
+    <td class="td9">Arrendamento transitório pela CDP à arrendatário transitória, da instação portuária correspondendo a 39.381,47 m², destinada ao recebimento, armazenamento e expedição de inflamáveis íquido a granel</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138867/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2001+PETROLEO+SABB%C3%81%20%28COSAN%29.pdf/812e4eff-8a7e-43b5-9711-ca01b6867a41" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 01</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138867/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2002+PETR%C3%93LEO+SABB%C3%81%20%28COSAN%29.pdf/e2c5b67e-a02d-45b3-a610-2b8927ca488c" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 02</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138867/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2003+PETR%C3%93LEO+SABB%C3%81%20%28COSAN%29.pdf/27d8ae1b-ac5f-4a64-973e-35299dff0c3b" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 03</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138867/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2004+PETR%C3%93LEO+SABB%C3%81%20%28COSAN%29.pdf/e3fc074b-c801-4dac-98a1-c4a5b7a219d4" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 04</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138867/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2005+PETR%C3%93LEO+SABB%C3%81%20%28COSAN%29.pdf/ba000146-06f7-45f7-b4e5-abd33f19c441" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 05</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138867/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2006+PETR%C3%93LEO+SABB%C3%81%20%28COSAN%29.pdf/e8a1a760-3873-4949-b8ff-d195198fae50" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 06</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138867/CONTRATO+M%C3%83E+PETROL%C3%89O+SABB%C3%81.pdf/f29429ed-4398-489b-9e0e-15b1e8be7ff5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO MÃE</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição nº 08</td>
+    <td class="td2">2633/2018</td>
+    <td class="td3">PETROBRAS TRANSPORTES S/A - TRANSPETRO</td>
+    <td class="td4">02.709.449/0001-59</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOMIR RESOLUÇÃO DIRGEP Nº 48/2018</td>
+    <td class="td7">05/12/2018 </td>
+    <td class="td8">03/06/2019 </td>
+    <td class="td9">Arrendamento Transitório à Petrobrás Transporte de uma área dentro do Porto Organizado de Belém (Miramar) com 42.145,34 m², na qual se encontra instalado um terminal para ecebimento, escoamento, armazenamento e movimentação de álcool e derivados de petróleo.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2001+TRANSPETRO.pdf/898b14d8-005e-400a-8a0e-50ffeca79cd2" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 01</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2002++TRANSPETRO.pdf/19a8171f-2046-48a0-86ff-ee4229b7e5d1" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 02</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2003+TRANSPETRO.pdf/2a611cac-4396-436f-8f65-020f10847d7a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 03</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2004+TRANSPETRO.pdf/4f58c0e1-11e3-4c8f-aa15-e5bb33e0d477" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 04</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2005+TRANSPETRO.pdf/7de6d7d8-aaad-434e-8102-eb988ba15a32" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 05</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2006+TRANSPETRO+PARTE+1.pdf/2934863d-f5b8-4d39-bda5-ff4901da63b7" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 06</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2006+TRANSPETRO+PARTE+2.pdf/606340b9-eeef-4647-b972-7f8a17b2801a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 06 - PARTE 2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2006+TRANSPETRO+PARTE+3.pdf/c7ca3f44-515c-4ecf-9c31-620ec7b3d59e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 06 - PARTE 3</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2006+TRANSPETRO+PARTE+4+PUBLICA%C3%87%C3%83O+DOU.pdf/12118259-90ee-4b1c-9bed-438115098eb0" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 06 - PARTE 4</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2007+-+TRANSPETRO+PARTE+1.pdf/ca7d212e-9f07-41ff-888c-e3e4d054bc06" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 07</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2007+-+TRANSPETRO+PARTE+2.pdf/996933b3-799c-48ba-81ba-1e5bf6ddd476" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 07 - PARTE 2</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/CONTRATO+TRANSPETRO+MIRAMAR.pdf/fefb6e39-dccb-45a4-813d-593d1957b51a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/T.A.+N+01+TRANSPETRO+MIRAMAR.pdf/447377d4-f29a-4720-ad08-0dcfcbce465b" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 01</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/T.A.+N+02+TRANSPETRO+MIRAMAR.pdf/3ba1797f-d8e4-460a-9a4c-8a443a035e80" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 02</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/T.A.+N+03+TRANSPETRO+MIRAMAR.pdf/23356a80-11cf-46c1-8895-e139ffb04be8" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 03</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47138346/T.A.+N+04+TRANSPETRO+MIRAMAR.pdf/fd7225fb-39eb-4852-a1f7-048c8646f613" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 04</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato de Transição nº 04</td>
+    <td class="td2">2487/2017</td>
+    <td class="td3">PARAGÁS DISTRIBUIDORA S/A</td>
+    <td class="td4">05.840.319/0003-00</td>
+    <td class="td5">ENCERRADO</td>
+    <td class="td6">APOMIR RESOLUÇÃO DIRGEP Nº 46/2017</td>
+    <td class="td7">16/08/2017 </td>
+    <td class="td8">11/02/2018 </td>
+    <td class="td9">Arrendamento transitório à Paragás de área correspondente à 32.435,43m², dentro da área do Porto Organizado de Belém, onde se encontra instalada uma base para realização das tividades de armazenagem e movimentação de Gás Liquefeito de Petróleo da arrendatária.</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Termo Precário de Autorização de Uso- Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">PARAGÁS DISTRIBUIDORA S/A</td>
+    <td class="td4">02.633.393/0002-20</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">01/08/2005 </td>
+    <td class="td8">01/08/2006 </td>
+    <td class="td9">Autorização de uso, a título oneroso, de área retroportuária do Porto de Belém, para prestação de serviços portuários complementares</td>
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Termo Precário de Autorização de Uso- Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">SINDIPORTO CARLOS AUGUSTO DA ROCHA SOUZA</td>
+    <td class="td4">112.706.672-20</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">01/03/2005 </td>
+    <td class="td8">01/03/2010 </td>
+    <td class="td9">Uso de imóvel edificado com um pavimento localizado à Av. Marechal Hermes s/n Portão 10 - Porto de Belém</td>
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Termo Precário de Autorização de Uso- Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">O. G. OLIVEIRA INDÚSTRIA E COMÉRCIO - ME KIBE HOUSE</td>
+    <td class="td4">00.550.818/0001-88-</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">01/03/2005 </td>
+    <td class="td8">01/03/2006 </td>
+    <td class="td9">Autorização de uso, a título oneroso, de área retroportuária do Porto de Belém, para que a usuária possa manter exclusivamente suas atividades atualmente usuais de exploração do ercado de comestíveis com operação de lanchonete móvel.</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Termo Precário de Autorização de Uso- Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">BIGAS COMÉRCIO DE ALIMENTOS LTDA - ME</td>
+    <td class="td4">15.745.185/0001-30</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">01/03/2005 </td>
+    <td class="td8">01/03/2006 </td>
+    <td class="td9">Autorização de uso, a título oneroso, de área retroportuária do Porto de Belém, para que a usuária possa manter exclusivamente suas atividades atualmente usuais de exploração do ercado de comestíveis com operação de lanchonete móvel.</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Termo Precário de Autorização de Uso- Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">JOÃO BATISTA DA SILVA COMÉRCIO ME</td>
+    <td class="td4">02.757.420/0001-42</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">01/03/2005 </td>
+    <td class="td8">01/03/2006 </td>
+    <td class="td9">Constitui objeto da presente autorização de uso, a título precário a área e instalações definidas no Anexo I, para que a usuária possa manter exclusivamente suas atividades tualmente usuais de exploração do mercado de comestíveis com operação de lanchonete móvel.</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">30/03</td>
+    <td class="td2">Processo CDP n.º2610/03</td>
+    <td class="td3">OCRIM S/A – PRODUTOS ALIMENTÍCIOS</td>
+    <td class="td4">61.065.199/0004-73</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOBEL RESOLUÇÃO DIRGEP Nº 15/2017 DE 12/06/2017</td>
+    <td class="td7">15/12/2003 </td>
+    <td class="td8">15/12/2028 </td>
+    <td class="td9">Arrendamento de uma área com 5.360m²,e respectivas instalações nela existentes como edificações,benfeitorias,máquinas,equipamentos e acessórios especificados nos anexos II e III, da omada de Preçosn.º02/2003, localizada no Porto de Belém,destinada a armazenagem e movimentação de trigo que fazem parte integrante do presente contrato, juntamente com a proposta da arrendatária,independente de transcrição, de acordo com estabelecido no processo n.º2610/03.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47138313/Contrato+n%C2%BA%2030-2003.pdf/34d14025-4c89-48b2-adc9-2430caa6ce7f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato nº 30-2003</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">14/2003</td>
+    <td class="td2"> </td>
+    <td class="td3">CONVICON - CONTEINERES DE VILA DO CONDE</td>
+    <td class="td4">04.221.289/0001-20</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOCON RESOLUÇÃO DIRGEP Nº 18/2017 DE 12/06/2017</td>
+    <td class="td7">19/09/2003 </td>
+    <td class="td8">18/09/2033 </td>
+    <td class="td9">Arrendamento de área de cerca de 102.500m2 para implantação e exploração de pátio para movimentação e armazenagem de contêineres, veículos e cargas utilizadas para xportação,importação ou cabotagem, bem como à consolidação de Contêineres.Tal instalação será denominada CONVICON-Contêineres de Vila do Conde.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/Contrato+n%C2%BA%2014-2003+CONVICON.pdf/e27234c7-e483-4d7a-9632-3879d379c69e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato nº 14-2003</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+01+_+14-2003+CONVICON.pdf/46a78d3f-aa2c-4e65-a6cc-1a163d676cc3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 01</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+02+_14-2003+CONVICON.pdf/805b31f1-9b66-4328-8300-1cf7662f2413" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 02</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+03+_14-2003+CONVICON.pdf/a0b5cc9a-48da-4006-bb17-92fd71db891b" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 03</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+04+_+14-2003+CONVICON.pdf/aba9f806-8d65-4ed6-9b26-6ce468078ee9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 04</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+05+_+14-2003+CONVICON.pdf/0e064327-c3d4-4981-acee-9c8275e4bfaf" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 05</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+06+_+14-2003+CONVICON.pdf/f966c0ff-5eb3-4faa-ace3-fc629a2d4aa7" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 06</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+07+_+14-2003+CONVICON.pdf/2c4210c2-6dab-4e31-938d-5ab752e5df58" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 07</a></p>
+
+        <p><a href="https://www.cdp.com.br/documents/10180/47139521/T.A.+N+08+_+14-2003+CONVICON.pdf/df992b33-cb10-4de6-8ed8-e8ec302e96d1" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T.A. N 08</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139515/termo+de+autoriza%C3%A7%C3%A3o+CONVICON.pdf/c9a345c4-8e44-4baa-be67-434c1de545fc" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">termo de autorização</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">22/2001</td>
+    <td class="td2">Processo JFDF nº 0034362-23.2015.4.01.3400</td>
+    <td class="td3">BUNGE FERTILIZANTES S/A / NPK FERTILIZANTES LTDA - ATUAL YARA BRASIL FERTILIZANTES S/A</td>
+    <td class="td4">92.660.604/0001-82</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6">APOCON RESOLUÇÃO DIRGEP Nº 16/2017 DE 12/06/2017</td>
+    <td class="td7">10/05/2000 </td>
+    <td class="td8">10/05/2015 </td>
+    <td class="td9">Arrendamento de área com 15.000.00 m², integrante do Porto de Vila do Conde, no Município de Barcarena,conforme as indicações e delimitações da planta em anexo.</td>
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">contrato 14/2001</td>
+    <td class="td2"> </td>
+    <td class="td3">SOCIEDADE FOGÁS LTDA</td>
+    <td class="td4">04.563.672/0001-66</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOSAN RESOLUÇÃO DIRGEP Nº 27/2017 DE 12/06/2017</td>
+    <td class="td7">31/05/2001 </td>
+    <td class="td8">31/05/2016 Prorrogado por mais 15 anos, ou seja, até 05/06/2031 </td>
+    <td class="td9">Arrendamento de área de 8.450,57m2 no Porto de Santarém, situado na cidade de Santarém,no Estado do Pará, conforme as indicações e delimitações da planta anexa.</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139348/Contrato+n%C2%BA14-2001.FOGAS.pdf/526b52af-b019-4650-ada1-675d9ea3ee3f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato nº14-2001</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139348/TERMO+ADITIVO+N%C2%B0%2001+AO+CONTRATO+n%C2%BA%2014-2001.pdf/ff595a0e-4c94-492c-bb63-614e870961cf" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">TERMO ADITIVO N° 01</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">04/2000</td>
+    <td class="td2">Processo JFDF nº 0034362-23.2015.4.01.3400</td>
+    <td class="td3">FERTILIZANTES OURO VERDE S/A - ATUAL YARA BRASIL FERTILIANTES S/A</td>
+    <td class="td4">92.660.604/0001-82</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6">APOCON RESOLUÇÃO DIRGEP Nº 16/2017 DE 12/06/2017</td>
+    <td class="td7">26/06/2000 </td>
+    <td class="td8">26/06/2015 </td>
+    <td class="td9">Arrendamento de um terreno com área de 10.000.00m² no Porto de Vila do Conde, situada na cidade de Barcarena,no Estado do Pará,conforme as indicações e delimitações da planta anexa ue, rubricada pelas signatárias do presente instrumento,passa a fazer parte do mesmo.</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato 25/1999</td>
+    <td class="td2">776/1999</td>
+    <td class="td3">CARGILL AGRÍCOLA S/A</td>
+    <td class="td4">60.498.706/0001-57</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOSAN RESOLUÇÃO DIRGEP Nº 17/2017 DE 12/06/2017</td>
+    <td class="td7">01/12/1999 </td>
+    <td class="td8">01/12/2024 </td>
+    <td class="td9">Arrendamento de área de 45.459,71m², integrante do Porto de Santarém, localizado na Av.Cuiabá, s/n.º, nomunicípio de Santarém, No Estado do Pará, conforme as indicações e elimitações da planta anexa que, rubricada pelas signatárias do presente instrumento,passa a fazer parte do mesmo.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139344/Contrato+n%C2%BA25-1999+completo.pdf/b725dc6c-989a-499e-b044-bcca79c94b27" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato nº25-1999</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato 02/1999</td>
+    <td class="td2"> </td>
+    <td class="td3">SHV GÁS (MINASGÁS S/A DISTRIBUIDORA DE GÁS COMBUSTÍVEL)</td>
+    <td class="td4"> </td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">11/01/1999 </td>
+    <td class="td8">11/01/2014 </td>
+    <td class="td9">Arrendamento de área de 28.058 m² de área para movimentação e armazenamento de granéis líquidos.</td>
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrao de Transição nº 04</td>
+    <td class="td2">2049/2018</td>
+    <td class="td3">DISTRIBUIDORA EQUADOR DE PRODUTOS DE PETRÓLEO LTDA</td>
+    <td class="td4">03.128.979/0007-61</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6"> </td>
+    <td class="td7">21/09/2018 </td>
+    <td class="td8">20/03/2019 </td>
+    <td class="td9">Arrendamento Transitório de uma área dentro do Porto Organizado de Santarém com 20.859,25 m², na qual se encontra instalado um terminal para armazenagem e movimentação de granéis iquidos de derivados de petróleo.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139346/Contrato+19-1997+-+EQUADOR.pdf/dbe114bd-c1d4-440f-b885-7e454de85a67" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato 19-1997</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2001+-+DISTRIBUIDORA+EQUADOR.pdf/f12feace-ec15-4bc0-9f22-f308c4d8f95a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 01</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2002+-+DISTRIBUIDORA+EQUADOR.pdf/ac8d0e29-e979-487c-a284-ea51384d0f1f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 02</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2003+-+DISTRIBUIDORA+EQUADOR+Parte+1.pdf/7cc8839e-d5f2-43dd-b3f6-8f1efb4d6583" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 03</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2004+-+DISTRIBUIDORA+EQUADOR+Parte+2.pdf/90641659-75f0-4715-81af-9b742530b138" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 04 - PARTE 02</a></p>
+        <p>
+            <a href="https://www.cdp.com.br/documents/10180/47139346/CONTRATO+DE+TRANSI%C3%87%C3%83O+N%C2%BA%2004+-+DISTRIBUIDORA+EQUADOR.pdf/7613d337-ce7e-4d52-853b-cd896f933441" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;"></a>
+        </p>
+        <p><a href="" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO DE TRANSIÇÃO Nº 04</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">58/1997</td>
+    <td class="td2"> </td>
+    <td class="td3">ALUBAR METAIS S/A</td>
+    <td class="td4">83.673.756/0001-29</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6"> </td>
+    <td class="td7">30/12/1997 </td>
+    <td class="td8">30/12/2022 </td>
+    <td class="td9">Arrendamento de área contínua de terras com 14.765m²,integrante do Arranjo Geral do Zoneamento Portuário,localizado no Porto de Vila do Conde, conforme as indicações e delimitações a planta em anexa.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139517/58-1997+CONTRATO+ALUBAR.pdf/5b40782c-2dfe-494e-bccc-eed83b02f45e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO 58-1997 </a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">09/1995</td>
+    <td class="td2"> </td>
+    <td class="td3">TEXACO BRASIL S/A - ATUAL IPIRANGA PRODUTOS DE PETRÓLEO</td>
+    <td class="td4">33.337.122/0001-27</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOCON RESOLUÇÃO DIRGEP Nº 20/2017 DE 12/06/2018</td>
+    <td class="td7">09/05/1995 </td>
+    <td class="td8">09/05/2010- Prorrogado até 09/05/2025 </td>
+    <td class="td9">Arrendamento de um terreno em estado natural, sem edificação, com 20.000m² (200m x100m), com a maior dimensão voltada para o Rio Pará, limitado pelo seu lado direito com a àrea do astelo D"Água do Porto e pelo seu lado esquerdo com a continuação da faixa de terra pertencente á area n.º7 do Zoneamento do Porto de Vila do Conde, no Estado do Pará.</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139523/IPP+VILA+DO+CONDE+09.95+TA+N+01.pdf/cf499ba6-635a-413b-acf9-4e12c57b2c36" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">TA N 01</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139523/IPP+VILA+DO+CONDE+09.95+TA+N+02.pdf/f73c217f-771e-4120-b704-a7896fa72f54" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">TA N 02</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139523/IPP+VILA+DO+CONDE+09.95+TA+N+03.pdf/c207ffa6-a2b2-48f4-b94b-a41b9ffad239" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">TA N 03</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139523/IPP+VILA+DO+CONDE+09.95.pdf/e5a81cf9-4ed8-4371-ad6d-8d0a131d1bf9" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">18/1994</td>
+    <td class="td2"> </td>
+    <td class="td3">ALUNORTE S/A</td>
+    <td class="td4">05.848.387/0001-54</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6">APOCON RESOLUÇÃO DIRGEP Nº 28/2017 DE 12/06/2017</td>
+    <td class="td7">23/12/1994 </td>
+    <td class="td8">23/12/2019 </td>
+    <td class="td9">Operação compartilhada das instalações portuárias ora contratada, compreenderá a movimentação e armazenamento de mercadorias da Alunorte e da Albrás, destinadas ou provenientes de ransporte aquaviário, nos termos definidos neste contrato</td>
+
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139519/CONTRATO+34-93-TAO-CDP-ALBRAS-ALUNORTE.pdf/b55dec79-2277-46aa-91e0-e907017ced22" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO 34-93</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139519/T.+A.+N+01_CONTRATO+34-93-TAO-CDP-ALBRAS-ALUNORTE.pdf/320c2845-8a9a-4b2d-b123-60101d54e516" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T. A. N 01</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139519/T.+A.+N+02_CONTRATO+34-93-TAO-CDP-ALBRAS-ALUNORTE.pdf/ab81f271-85b1-4438-b4af-e3ec653307b7" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T. A. N 02</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139519/T.+A.+N+03+_+ONTRATO+34-93-TAO-CDP-ALBRAS-ALUNORTE.pdf/4c648f0b-7382-44f4-8f91-324b539c2400" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T. A. N 03</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139519/T.+A.+N+04+_+CONTRATO+34-93-TAO-CDP-ALBRAS-ALUNORTE.pdf/d7571e5f-3ff1-4a7e-a9a2-ed87a304690f" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T. A. N 04</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139519/T.+A.+N+05+_CONTRATO+34-93-TAO-CDP-ALBRAS-ALUNORTE.pdf/6c67054d-8fe8-493d-aa3e-991dee7157fb" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">T. A. N 05</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">18/1994</td>
+    <td class="td2"> </td>
+    <td class="td3">ALUBAR METAIS S/A</td>
+    <td class="td4">83.673.756/0001-29</td>
+    <td class="td5">ATIVO</td>
+    <td class="td6"> </td>
+    <td class="td7">23/08/1994 </td>
+    <td class="td8">23/08/2019 </td>
+    <td class="td9">Arrendamento de área de 10.000m² integrantes da área portuária do Porto de Vila do Conde</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139517/Contrato+n%C2%BA18-1994+ALUBAR.pdf/3387c9be-518a-4eb1-9262-62c3a29ee969" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato nº18-1994</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139517/Contrato+Unificado+Alubar+-+%C3%81rea+n%C3%A3o+operacional.pdf/991b386a-46c5-4c9d-8e11-4bbb12989250" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato Unificado - Área não operacional</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139517/CONTRATO+UNIFICADO+ALUBAR.pdf/982eb500-7d90-45cc-8951-fdd7f8a22356" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO UNIFICADO</a></p>
+        <p><a href="https://www.cdp.com.br/documents/10180/47139515/termo+de+autoriza%C3%A7%C3%A3o+ALUBAR.pdf/44ada7c9-55ba-4549-b47e-442b6b42e1e8" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">termo de autorização</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">17/90- Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">ATLAS VEÍCULOS LTDA.</td>
+    <td class="td4">83.658.401/0001-60</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">01/05/1990 </td>
+    <td class="td8">01/05/1995 </td>
+    <td class="td9">arrendamento dos galpões de n.ºs 10 e 11, com 1.500 m² de área, cada, integrante do patrimônio do porto de Belém, no Estado do Pará, conforme indicações e delimitações constante na lanta em anexa.</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">04/82- Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">SAMAMBAIA TURISMO LTDA.</td>
+    <td class="td4">05.435.722/0001-03</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6"> </td>
+    <td class="td7">01/05/1982 </td>
+    <td class="td8">01/05/1987 </td>
+    <td class="td9">locação de uma área de propriedade da CDP, localizado entre a Avenida Marechal Hermes e Rua de Belém e transversais, Travessa Piedade e Praça Magalhães, para instalação e uncionamento da Churrascaria Samambaia petencente a Locatária</td>
+
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Contrato 36/78-Contrato Sub-Judice</td>
+    <td class="td2"> </td>
+    <td class="td3">PETRÓLEO SABBÁ S/A</td>
+    <td class="td4">04169215/0001</td>
+    <td class="td5">SUB JUDICE</td>
+    <td class="td6">APOSAN RESOLUÇÃO DIRGEP Nº 24/2017 DE 12/06/2017</td>
+    <td class="td7">01/08/1978 </td>
+    <td class="td8">01/08/1983 </td>
+    <td class="td9">Locação do Terminal de inflamáveis localizado em Santarém - área 35.096 m²</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47139351/36-1978.PETROLEO+SABBA.pdf/5d588e3a-2a35-4a5c-ac15-a336cb23a716" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">CONTRATO 36-1978</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Escritura Pública (Acordo Judicial)</td>
+    <td class="td2"> </td>
+    <td class="td3">PETRÓLEO SABBÁ S/A</td>
+    <td class="td4">04.169.215/0001-91</td>
+    <td class="td5">ENCERRADO</td>
+    <td class="td6"> </td>
+    <td class="td7">25/11/1976 </td>
+    <td class="td8">Acordo Judicial 09/05/2002 a 09/05/2012 e Prorrogação com base na Resolução 525/2005 da ANTAQ até 09/05/2015. </td>
+    <td class="td9">Locação do Terminal de inflmáveis situado em Miramar, com área de 26.788,40 m².</td>
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Escritura Pública(acordo Judicial)</td>
+    <td class="td2"> </td>
+    <td class="td3">ESSO/COSAN BRASILEIRA DE PETRÓLEO LTDA.</td>
+    <td class="td4">33.000.092/0004-01</td>
+    <td class="td5">ENCERRADO</td>
+    <td class="td6"> </td>
+    <td class="td7">01/01/1972 </td>
+    <td class="td8">Acordo Judicial 09/05/2002 a 09/05/2012 e Prorrogação com base na Resolução 525/2005 da ANTAQ até 09/05/2015. </td>
+    <td class="td9">Locação do Terminal de inflmáveis situado em Miramar, com área de 41.596,06m².</td>
+    <td class="td10"> </td>
+</tr>
+<tr>
+    <td class="td0"> </td>
+    <td class="td1">Escritura Pública (Acordo Judicial)</td>
+    <td class="td2"> </td>
+    <td class="td3">COMPANHIA DE PETRÓLEO IPIRANGA ATUAL (PETROBRÁS DISTRIBUIDORA S/A)</td>
+    <td class="td4">33337.122/0001-27</td>
+    <td class="td5">ENCERRADO</td>
+    <td class="td6"> </td>
+    <td class="td7"> Acordo Judicial 09/05/2002 a </td>
+    <td class="td8">09/05/2012 e Prorrogação com base na Resolução 525/2005 da ANTAQ até 09/05/2015. </td>
+    <td class="td9">Locação do Terminal de inflamáveis em Miramar - área de 21.560m²</td>
+    <td class="td10"> </td>
+</tr>
+
+    </tbody>
+    </table>
+
+    </div>                    
+    </div>
+    </div>
+    </div>
+    </div>
+          
+    <footer class="footer">
+        <div class="container ">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <p style="color:white"> Companhia Docas do Pará - CDP </br>Av.Presidente Vargas, 41, CEP 66010-000, Belém - Pará - Brasil
+            </br> Tel: (91) 3182-9000 | CNPJ: 04.933.552/0001-03 </p>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <img src="img/logo.png" width="250px">
+
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    
+    <!-- jQuery -->
+    <!-- Booststrap -->
+    <!-- DataTable -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="js/pace.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        var table = $('#tab1').DataTable({
+            responsive: true,
+            dom: 'Bfrtip',
+        buttons: [ { extend: 'excelHtml5',
+            autoFilter: true,
+            sheetName: 'Exported data',
+        },
+            {
+                extend: 'pdfHtml5',
+                download: 'open',
+                 orientation: 'landscape',
+                pageSize: 'LEGAL',
+                customize: function ( doc ) {
+                    doc.content.splice( 1, 0, {
+                        margin: [ 0, 0, 0, 12 ],
+                        alignment: 'center',
+                        image: 'data:image/png;base64,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'
+                    } );
+                }
+            }
+
+        ],
+            
+
+            
+            "ordering": false,
+
+            "language": {
+                "lengthMenu": "Exibição de _MENU_ registros por página",
+                "zeroRecords": "Não encontrado - desculpa",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponível",
+                "infoFiltered": "(filtrado de _MAX_ total de registros)",
+                "search": "Procurar:",
+                "paginate": {
+                    "first": "Primeiro",
+                    "last": "Último",
+                    "next": "Próximo",
+                    "previous": "Anterior"
+                }
+
+            }
+        });
+
+
+    });
+
+</script>
+    
+</body>
+</html>

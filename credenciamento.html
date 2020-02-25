@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="datatables/datatables.min.css" >
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/pace.css">
+
+    <title>CDP - Credenciamento</title>
+
+    <style> 
+    /*modalidade
+    ------------*/
+    .td3 {
+        text-transform: uppercase;
+    }
+    /*contratado
+    ------------*/
+    .td4 {
+        text-transform: uppercase;
+        text-align: left;
+        white-space: normal !important;
+    }
+    /*cnpj
+    ------------*/
+    .td5 {
+        white-space: nowrap !important;
+    }
+
+    @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+    }
+    @-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+
+    .fadeTable {
+    opacity:0;
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;}
+
+    .fadeTable-delay {    
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -o-animation-delay:1s;
+    animation-delay:1s;}
+
+    </style>
+
+</head>
+
+<body>
+    
+    <header> 
+ 
+        <nav class="nav-first navbar navbar-expand-md ">
+            <div class="container d-flex justify-content-around">           
+                <div>
+                        <a href="#" class="navbar-brand"> <img src="img/logo.png" width="250px"> </a>
+                </div> 
+                <div style="padding-left: 40px !important;">
+                        <a href="#" class="navbar-brand" > <img src="img/acesso.png" width="50%"> </a>
+                </div>
+            </div> 
+        </nav>
+
+        <nav class="nav-second navbar navbar-expand-md">
+            <div class="container ">
+                <button class="navbar-toggler navbar-light bg-light" data-toggle="collapse" data-target="#nav-third"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                <div class=" fill collapse navbar-collapse" id="nav-third">
+                        <ul class=" navbar-nav align-items-center">
+                            <li class="nav-item "> <a href="index.html" class="nav-link pageactive ">Obras e Serviços</a> </li>
+                            <li class="nav-item "> <a href="credenciamento.html" class="nav-link">Credenciamento</a> </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="ASD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Autorização de Serviço
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="ASD">
+                                  <a class="dropdown-item" href="dirafi.html">Diretoria Administrativa Financeira</a>
+                                  <a class="dropdown-item" href="direxe.html">Diretoria Executiva</a>
+                                  <a class="dropdown-item" href="dirgep.html">Diretoria de Gestão Portuária</a>
+                                  <a class="dropdown-item" href="dirpre.html">Diretoria da Presidência</a>
+                                </div>
+                            </li>
+                            <li class="nav-item "> <a href="arrendamento.html" class="nav-link">Arrendamento</a> </li>
+                            <li class="nav-item "> <a href="cessão de uso.html" class="nav-link">Cessão de Uso</a> </li>
+                            <li class="nav-item "> <a href="operacional.html" class="nav-link">Operacional</a> </li>
+                        </ul>
+                    </div>
+            </div> 
+        </nav>
+
+    </header> 
+
+    <nav> 
+        <div class="container"> 
+        <div class="row">
+        <div class="col-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"> <a href="#">Acesso a Informação</a> </li>
+                <li class="breadcrumb-item"> <a href="#">Licitações e Contratos</a> </li>
+                <li class="breadcrumb-item active">Obras e Serviços</li>
+            </ol>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <p class="descricao1 text-justify">Nessa seção são divulgados os contratos realizados pela Companhia Docas do Pará.</p>
+                
+    </div>
+    </div>  
+    <div class="row">
+    <div class="col-lg-7 col-sm-12">
+        <table class="descricao2 table table-sm text-left" style="color: #555555;">
+            <caption class="text-success">Atualizado em 26/06/2019</caption>
+            <tbody>
+                <tr>
+                    <th scope="row" style="border-top:#fff">I</th>
+                    <td style="border-top:#fff">ÓRGÃO SUPERIOR: MINISTÉRIO DA INFRAESTRUTURA</td>
+                </tr>
+                <tr>
+                    <th scope="row">II</th>
+                    <td>ÓRGÃO SUBORDINADO: COMPANHIA DOCAS DO PARÁ </td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row">III</th>
+                    <td>UNIDADE GESTORA: GERÊNCIA JURÍDICA </td>
+                </tr>
+            </tbody>
+        </table>       
+    </div>
+    </div>   
+    </div>
+
+    <div class="container"> 
+    <div class="row">
+    <div class="col-lg-8 col-sm-12">
+    <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+        <div style="font-family: 'proximanovacondensed';">Como encontrar informações na tabela</div>
+    </button>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Pesquise por: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+                <div class="modal-body"> Número do contrato </br> Número do processo </br> Nome da empresa </br>
+                    Modalidade </br> Parte do objeto </br> Nome do Fiscal </br> Situação do contrato
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+    </div>
+    </div>
+    </div>
+    </div>
+<div class="fadeTable fadeTable-delay">
+    <table class=" display responsive nowrap" id="tab1" align="center" style="width:100%;" data-page-length="25">
+    <thead>
+        <tr>
+            <th> </th>
+            <th data-priority="1">CONTRATO</th>
+            <th>PROCESSO</th>
+            <th>MODALIDADE</th>
+            <th data-priority="2">CONTRATADO</th>
+            <th>CNPJ</th>
+            <th>SITUAÇÃO</th>
+            <th>ÍNICIO</th>
+            <th>TÉRMINO</th>
+            <th>OBJETO</th>
+            <th>CONTRATO INVIDUAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+    <td class="td0"></td>
+    <td class="td1">001/2017</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CENTRO AUDITIVO DO PARÁ LTDA - ME</td>
+    <td class="td5">21.876.788/0001-74</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">09/11/2017</td>
+	<td class="td8">09/11/2018</td>
+    <td class="td9">Serviços de avaliação de fonoaudiologia e otorrinolaringologia, ambos com serviços de audiometria.</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CENTRO+AUDITIVO+DO+PAR%C3%81.pdf/b0669b42-206a-4583-8447-4d95ae25bc40" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">017/2016</td>
+    <td class="td2">115 e 3293/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">DÉBORA BIANCHI ALVES</td>
+    <td class="td5"></td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">10/11/2016</td>
+	<td class="td8"> 09/11/2017</td>
+    <td class="td9"></td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/17-2016+-+DEBORA+-+CONCLU%C3%8DDO.pdf/9fc5bc95-ff58-4d7e-9dfa-0f5fec308609" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">016/2016</td>
+    <td class="td2">3293/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">DANIELLE NASCIMENTO ALMEIDA</td>
+    <td class="td5">604.228.152-68</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">09/11/2016 </td>
+	<td class="td8">08/11/2016</td>
+    <td class="td9">Serviços de Psicologia Clínica.</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/16-2016+-+DANIELLE+-+CONCLU%C3%8DDO.pdf/2cde7658-edfe-4eac-a7d0-dbb82f0a6e1c" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">015/2016</td>
+    <td class="td2">3293/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">ALINE DIAS Ó DE ALMEIDA FURTADO</td>
+    <td class="td5">510.074.282-87</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">9/11/2016</td>
+	<td class="td8"> 08/11/2017</td>
+    <td class="td9">Serviços de Fonoaudilogia</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/15-2016+-+ALINE+-+CONCLU%C3%8DDO.pdf/e971c993-ee4a-4bf3-a279-acb05f876419" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">014/2016</td>
+    <td class="td2">3293/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">PULMOCENTER S/S LTDA</td>
+    <td class="td5">83.368.498/0001-77</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">09/11/2016</td>
+	<td class="td8"> 08/11/2017 08/11/2018 09/11/2019</td>
+    <td class="td9">Serviços Médicos especializados de pneumologia com prova de função pulmonar completa/espirometria-consultas médicas e pneumologia-fisioterapia respiratoria-cirurgia torácica e simpatectomia por video.</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2014+-+PULMOCENTER.pdf/cfc6928c-9799-415c-a011-3421ad00f36d" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">013/2016</td>
+    <td class="td2">3293/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">J. VIEIRA E CIA LTDA</td>
+    <td class="td5">08.453.914/0001-10</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">11/11/2016 </td>
+	<td class="td8">10/11/2017 08/11/2018 09/11/2019</td>
+    <td class="td9">Serviços de Exames ocupacionais dos empregados do Porto de vila do Conde</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/13-2016+-+J+VIEIRA+-+CONCLUIDO.pdf/03f93ea9-4fc1-4f15-bf2a-ca711b23f060" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">012/2016</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">F. J. V. MERGULHÃO E CIA LTDA (CENTRO MÉDICO BRASMEDE)</td>
+    <td class="td5">02.600.250/0001-98</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">14/06/2016 </td>
+	<td class="td8">13/06/2017 15.05.2018 04/06/2019</td>
+    <td class="td9">Serviços de Clínica Médica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/12-2016+-+BRASMEDE.pdf/ec0d2326-16ca-4b8c-bbcb-912358756c3a" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">011/2016</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">EUNICE DOROTÉA DE MATOS DUAILIBE</td>
+    <td class="td5">302.573.792-15</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">17/05/2016 </td>
+	<td class="td8">16/05/2017 15.05.2018 17/05/2019</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">010/2016</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">JÚLIA NUNES MASCARENHAS FREIRE</td>
+    <td class="td5">079.600.502-87</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">17/05/2016 </td>
+	<td class="td8">16/05/2017 15/05.2018 17/05/2019</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/10+e+11-2016+-+JULIA+E+EUNICE.pdf/2535291e-64bf-4202-b6d2-64f9565ba132" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42614</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">ROBERTO DE SOUZA TOBIAS</td>
+    <td class="td5">061.026.972-00</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">25/05/2016</td>
+	<td class="td8"> 24/052017 15.05.2018 25/05/2019</td>
+    <td class="td9">Oftalmologia</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/09-2016+-+ROBERTO.pdf/37dc5e79-b5de-4d66-b5e7-90343bc1ce04" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42583</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">PAULA FRASSINETTI FERREIRA DO AMARAL</td>
+    <td class="td5">118.722.762-53</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">16/05/2016</td>
+	<td class="td8"> 15/05/2017 15/05/2018 15/05/2019</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/08-2016+-+PAULA.pdf/929dfeb8-a09a-44cd-a29e-8c446fd82cbc" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42552</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">OLGA BATISTA ROCHA TEIXEIRA</td>
+    <td class="td5">184.373.032-49</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">19/05/2016</td>
+	<td class="td8"> 18/05/2017</td>
+    <td class="td9">Ginecologia</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/07-2016+-+OLGA+-+CONCLU%C3%8DDO.pdf/313592a6-3d79-453f-b10a-57c64d112a13" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42522</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">MARIETE CHAGAS DA SILVA</td>
+    <td class="td5">293.825.802-04</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">16/05/2016 </td>
+	<td class="td8">15/05/2017 15.05.2118 16/05/2019</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/06-2016+-+MARIETE.pdf/76efc0be-000c-44cc-9a00-8d201cf846b5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42491</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">FABIANO DE CRISTO</td>
+    <td class="td5">013.033.172-49</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">20/05/2016 </td>
+	<td class="td8">19/05/2017 15.05.2018 21/05/2019</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42461</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">MÁRCIA MARIA MENEZES DIAS</td>
+    <td class="td5">081.939.162-04</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">20/05/2016 </td>
+	<td class="td8">19/05/2017 15.05.2018 21/05/2019</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/04+-+2016+-+MARCIA.pdf/6016892e-bcd5-404b-8271-593597083ad5" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42430</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">R. V. BRASÃO LTDA</td>
+    <td class="td5">05.481.868/0001-74</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">20/05/2016</td>
+	<td class="td8"> 19/05/2017 15.05.2018 21/05/2019</td>
+    <td class="td9">Exames Médicos</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42401</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">LABORATÓRIO DE PATOLOGIA CLÍNICA HÉLIO OLIVEIRA – DANILO MENDONÇA LTDA</td>
+    <td class="td5">04.103.305/0001-80</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">20/5/2016</td>
+	<td class="td8"> 19/05/2017 15.05.2018 21/05/2019</td>
+    <td class="td9">Exames Médicos</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/02-2016+-+H%C3%89LIO+E+DANILO.pdf/6d99b28a-d0c9-4fbe-9256-1fe02d6e74d8" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">42370</td>
+    <td class="td2">1155/2016</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CONSULTÓRIO DE PATOLOGIA CLÍNICA AMARAL COSTA S/C LTDA</td>
+    <td class="td5">04.572.038/0001-90</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">16/05/2016</td>
+	<td class="td8"> 15/05/2017 15/05/2018 16/05/2019</td>
+    <td class="td9">Exames Médicos</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/01-2016+-+AMARAL.pdf/846608d0-be9a-4e87-ace8-17e10a29387d" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">41275</td>
+    <td class="td2">3680/2013</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">SILVIA ELIZABEtd COUTINHO E VASCONCELOS</td>
+    <td class="td5">681.545.342-15</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">22/11/2013</td>
+	<td class="td8"> 22/11/2014</td>
+    <td class="td9">Psicologia.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">41153</td>
+    <td class="td2">2899/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">DÉBORA BIANCHI ALVES</td>
+    <td class="td5">021.535.019-70</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">24/09/2012</td>
+	<td class="td8"> 24/09/2013 24/09/2014 24/09/2015 24/09/2016</td>
+    <td class="td9">Psicologia.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">41122</td>
+    <td class="td2">2899/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA DE DIAGNÓSTICOS E PREVENÇÃO EM MEDICINA LTDA - PREVINE</td>
+    <td class="td5">04.154.474/0001-49</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">24/09/2012 </td>
+	<td class="td8">24/09/2013 24/09/2014 24/09/2015 24/09/2016</td>
+    <td class="td9">Serviços de cardiologia.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">41091</td>
+    <td class="td2">2899/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA OTORRINOLARINGOLÓGICA DE SANTARÉM LTDA.</td>
+    <td class="td5">03.750.466/0001-00</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">24/9/2012 </td>
+	<td class="td8">24/09/2013 24/09/2014 24/09/2015 24/09/2016</td>
+    <td class="td9">Serviços de otorrinolaringologia com audiometria e fonoaudiologia com audiometria.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">41061</td>
+    <td class="td2">2899/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CELSO DE SOUZA MATOS E CIA LTDA.</td>
+    <td class="td5">15.334.758/0001-33</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">24/09/2012 </td>
+	<td class="td8">24/09/2013 24/09/2014 24/09/2015 24/09/2016</td>
+    <td class="td9">Serviços de análises clínicas para a CDP</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">41030</td>
+    <td class="td2">2885/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLAUDIO TOBIAS ACATUASSU NUNES</td>
+    <td class="td5">061.023.102-25</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">18/10/2012 </td>
+	<td class="td8">18/10/2013 18/10/2014 18/10/2015 18/10/2016</td>
+    <td class="td9">Serviços de Otorrinolaringologia e exames audiológicos (audiometria e imitanciometria)</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">41000</td>
+    <td class="td2">2885/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">ALINE DIAS O DE ALMEIDA</td>
+    <td class="td5">510.074.282-87</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">23/08/2012 </td>
+	<td class="td8">23/08/2013 23/05/2014 23/08/2015 23/08/2016</td>
+    <td class="td9">Fonaudiologia</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">40969</td>
+    <td class="td2">2885/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">DANIELLE NASCIMENTO ALMEIDA</td>
+    <td class="td5">604.228.152-68</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">23/08/2012</td>
+	<td class="td8"> 23/08/2013 23/05/2014 23/08/2015 23/08/2016</td>
+    <td class="td9">Serviços de Psicologia Clínica.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">40940</td>
+    <td class="td2">2885/2012</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA FISIOTERÁPICA DO PARÁ S/S LTDA. (FISIOMED)</td>
+    <td class="td5">004350870001-20</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">22/08/2012 </td>
+	<td class="td8">22/08/2013 22/08/2014 22/08/2015 22/08/2016</td>
+    <td class="td9">Serviços médicos</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">40909</td>
+    <td class="td2">1100/2012</td>
+    <td class="td3"></td>
+    <td class="td4">FABIANO DE CRISTO</td>
+    <td class="td5">013.033.172-49</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">04/04/2012 </td>
+	<td class="td8">04/04/2013 04/04/2014 04/04/2015 04/04/2016</td>
+    <td class="td9">Serviços de Psicologia Clínica.</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/05-2016+-+FABIANO.pdf/ca9ea92d-083a-4f33-a360-b124ef0e29e3" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">015/2011</td>
+    <td class="td2">3049/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA IKETANI &amp; ALDO DIAGNOSTICO POR IMAGEM LTDA</td>
+    <td class="td5">01.315.904/0001-79</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">20/09/2011 </td>
+	<td class="td8">20/09/2012</td>
+    <td class="td9">Serviços de Diagnóstico por Imagem (Imagenologia)</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">014/2011</td>
+    <td class="td2">2893/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA PULMOCENTER S/S LTDA</td>
+    <td class="td5">83.368.498/0001-77</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">20/09/2011 </td>
+	<td class="td8">20/09/2012 20/09/2013 20/09/2014 20/09/2015 20/09/2016</td>
+    <td class="td9">Serviços médicos especializados de pneumologia com prova de função pulmonar completa/espirometria</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/14-2016-+PULMOCENTER+S.S+LTDA+-+CONCLUIDO.pdf/9d90ba26-5f3a-426c-b201-c6757379e9ad" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">013/2011</td>
+    <td class="td2">2906/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">J. VIEIRA E CIA LTDA</td>
+    <td class="td5">08.453.914/0001-10</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">20/09/2011</td>
+	<td class="td8"> 20/09/2012 20/09/2013 20/09/2014 20/09/2015 20/09/2016</td>
+    <td class="td9">Serviços de Exames Ocupacionais</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/13-2011+-+J.+VIEIRA.pdf/010e206a-e1e7-4d1f-9abd-37c6d1ee7097" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">012/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">OLGA BATISTA ROCHA TEIXEIRA</td>
+    <td class="td5">184.373.032-49</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">28/03/2011 </td>
+	<td class="td8">28/03/2012 28/03/2013 28/03/2014 28/03/2015 28/03/2016</td>
+    <td class="td9">Ginecologia</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2012+-+OLGA.pdf/39b950a8-e7a9-4b24-838d-87d86c777210" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">011/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">AUDREY LUCIANA BRAGA MARANHÃO</td>
+    <td class="td5">745.133.032-04</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">25/03/2011</td>
+	<td class="td8"> 25/03/2012</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">010/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">MARIETE CHAGAS DA SILVA</td>
+    <td class="td5">293.825.802-04</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">30/03/2011</td>
+	<td class="td8"> 30/03/2012 30/03/2013 30/03/2014 30/03/2015 30/03/2016</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2010-2011+-+MARIETE.pdf/b61217f2-19fd-4ab3-91a4-4acfb47c2101" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">009/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">PAULA FRASSINETTI FERREIRA DO AMARAL</td>
+    <td class="td5">118.722.762-53</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">31/03/2011</td>
+	<td class="td8"> 31/03/2012 31/03/2013 31/03/2014 31/03/2015 31/03/2016</td>
+    <td class="td9">Psicologia Clínica, Psicoterapia e Avaliação Psicológica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2009-2011+-+PAULA.pdf/3eb4726a-bcb9-42e3-96a4-3fc531178c81" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">008/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">ROBERTO DE SOUZA TOBIAS</td>
+    <td class="td5">061.026.972-00</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">31/03/2011 </td>
+	<td class="td8">31/03/2012 31/03/2013 31/03/2014 31/03/2015 31/03/2016</td>
+    <td class="td9">Oftalmologia</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2008-2011-+ROBERTO.pdf/4ce8dfd4-96fb-46d7-9212-e9adf22df9df" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">007/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">MÁRCIA MARIA MENEZES DIAS</td>
+    <td class="td5">081.939.162-04</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">28/03/2011 </td>
+	<td class="td8">28/03/2012 28/03/2013 28/03/2014 28/03/2015 28/03/2016</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2007-2011+-+MARCIA.pdf/f07c498e-343c-408f-aec9-9ce6f93f5585" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">006/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">JÚLIA NUNES MASCARENHAS FREIRE</td>
+    <td class="td5">079.600.502-87</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">28/03/2011 </td>
+	<td class="td8">28/03/2012 28/03/2013 28/03/2014 28/03/2015 28/03/2016</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2006-2011+-+JULIA.pdf/1a94a4f9-4311-4b3c-abc9-c6cb7e27d555" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">005/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CASSANDRA REGINA DE AMORIM PAMPLONA</td>
+    <td class="td5">212.073.052-00</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">18/03/2011 </td>
+	<td class="td8">18/03/2012 18/03/2013 18/03/2014 18/03/2015 18/03/2016</td>
+    <td class="td9">Psicologia Clínica</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2005-2011+-+CASSANDRA.pdf/0e567798-0a1a-48cd-b542-ca8da7e33b15" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">004/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLIFO SOCIEDADE SIMPLES LTDA</td>
+    <td class="td5">05.944.959/0001-07</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">28/03/2011 </td>
+	<td class="td8">28/03/2012 28/03/2013 28/03/2014 28/03/2015</td>
+    <td class="td9">Serviços Profissionais nas áreas de Psicologia Clínica, Avaliação Psicológica, Fonoaudiologia com serviços de Audiometria, Psiquiatria e Ortopedia</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2004-2011+-+CLIFO.pdf/105beb35-db01-4e95-a78e-678da425b4ed" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">003/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">LABORATÓRIO DE PATOLOGIA CLÍNICA HÉLIO OLIVEIRA – DANILO MENDONÇA LTDA</td>
+    <td class="td5">04.103.305/0001-80</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">28/03/2011</td>
+	<td class="td8"> 28/03/2012 28/03/2013 28/03/2014 28/03/2015</td>
+    <td class="td9">Serviços de Exames de Análises Clínicas</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/CONTRATO+N%C2%BA%2003+-+HELIO+E+DANILO.pdf/2d680dd6-fd6c-461e-80ac-cdddc98de7df" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">002/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">R. V. BRAZÃO LTDA</td>
+    <td class="td5">05.481.868/0001-74</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">25/03/2011 </td>
+	<td class="td8">25/03/2012 25/03/2013 25/04/2014 25/03/2015</td>
+    <td class="td9">Serviços de Exames de Análises Clínicas</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/03-2016+-+BRAZAO.pdf/98737c10-c879-4041-b3a8-372a66cbe48e" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">001/2011</td>
+    <td class="td2">329/2011</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CONSULTÓRIO DE PATOLOGIA CLÍNICA AMARAL COSTA S/C LTDA</td>
+    <td class="td5">04.572.038/0001-90</td>
+    <td class="td6">ATIVO</td>
+    <td class="td7">31/03/2011 </td>
+	<td class="td8">31/03/2012 31/04/2013 31/03/2014 31/03/2015</td>
+    <td class="td9">Prestação de Serviços de exames de análise clínica; radiologia; mamografia de alta resolução com estereotoxia computadorizada; densiometria óssea; ultrassonografia; teste ergométrico; eletrocardiograma; mapeamento cerebral computadorizado; endoscopia digestiva alta; audiometria; impedanciometria e ressonância magnética.Credenciamento</td>
+    <td class="td10">
+        <p><a href="https://www.cdp.com.br/documents/10180/47115502/01-2011+-+AMARAL+COSTA.pdf/239a58b3-2970-4dea-a7ab-692079fc6b36" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Contrato</a></p>
+    </td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">002/2010</td>
+    <td class="td2">4041/2008</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLINICA RADIOLÓGICA DR. OCTAVIO LOBO S/C LTDA.</td>
+    <td class="td5">05.018.981/0001-18</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">14/05/2010 </td>
+	<td class="td8">13/05/2011</td>
+    <td class="td9">Prestação de serviços de diagnóstico por imagem, com quadro técnico-profissional, instalações e equipamen</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">001/2010</td>
+    <td class="td2"></td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">J VIEIRA &amp; CIA LTDA</td>
+    <td class="td5">08.453.914/0001-10</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">30/04/2010 </td>
+	<td class="td8">29/04/2011</td>
+    <td class="td9">Prestação de serviços de exames ocupacionais dos empregados do Porto de Vila do Conde</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">002/2008</td>
+    <td class="td2">4041/2008</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">WEVERTON LIMA PRAIA</td>
+    <td class="td5">101.116.202-44</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">08/10/2008</td>
+	<td class="td8"> 08/04/2009</td>
+    <td class="td9">Prestação de Serviços especializados de aferição de aptidão psicológica para uso de arma de fogo.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">001/2008</td>
+    <td class="td2">CI/CPL nº 30/2008</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CENTER SAÚDE SERVIÇOS DE CLÍNICA MÉDICA LTDA</td>
+    <td class="td5">07.590.436/0001-27</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">29/02/2008 </td>
+	<td class="td8">28/02/2009</td>
+    <td class="td9">Prestação de Serviços de fonoaudiolo</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">021/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CENTRO DE DIAGNÓSTICO POR IMAGEM TAPAJÓS SC LTDA</td>
+    <td class="td5">00.426.744/0001-72</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007 </td>
+	<td class="td8">17/09/2008</td>
+    <td class="td9">Prestação de Serviços de diagnóstico por imagem.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">020/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">ESPAÇO FISIO E ACADEMIA DE GINÁSTICA LTDA. - ME</td>
+    <td class="td5">06.297.676/0001-75</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007 </td>
+	<td class="td8">18/09/2008</td>
+    <td class="td9">Prestação de Serviços de fisioterapia.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">019/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">JOÃO OTAVIANO DE MATOS NEVES</td>
+    <td class="td5">047.912.662-34.</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007 </td>
+	<td class="td8">17/09/2008</td>
+    <td class="td9">Prestação de Serviços de cardiologia.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">018/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA DE DIAGNÓSTICOS E PREVENÇÃO EM MEDICINA LTDA - PREVINE</td>
+    <td class="td5">04.154.474/0001-49</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18.09.2007 </td>
+	<td class="td8">17.09.2008</td>
+    <td class="td9">Prestação de Serviços de cardiológicos.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">017/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA OTORRINOLARINGOLÓGICA DE SANTARÉM LTDA.</td>
+    <td class="td5">03.750.466/0001-00</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007</td>
+	<td class="td8"> 17/09/2008</td>
+    <td class="td9">Prestação de Serviços dermatológi</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">016/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA DE FISIOTERAPIA SANTARÉM LTDA.</td>
+    <td class="td5">CNPJ Nº. 06.227.860/0001-49</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007 </td>
+	<td class="td8">17/09/2008</td>
+    <td class="td9">Prestação de Serviços de fisioterapia. Credencia</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">015/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CELSO DE SOUZA MATOS E CIA LTDA.</td>
+    <td class="td5">15.334.758/0001-33</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007 </td>
+	<td class="td8">17/09/2008</td>
+    <td class="td9">Prestação de Serviços de laboratório de análises clínicas.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">014/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">N.V. BERRETA &amp; CIA LTDA</td>
+    <td class="td5">34.645.770/0001-03</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007</td>
+	<td class="td8"> 17/09/2008</td>
+    <td class="td9">Prestação de Serviços de análises clínicas.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">013/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">TRAESEL E SILVESTRE LTDA.</td>
+    <td class="td5">07.881.619/0001-00</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007 </td>
+	<td class="td8">18/09/2008</td>
+    <td class="td9">Prestação de Serviços de dermatológi</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">012/2007</td>
+    <td class="td2">2356/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">AMORIM E BIANCHI TDA.-ANÁLISES CLÍNICAS</td>
+    <td class="td5">07.417.321/0001-35</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">18/09/2007</td>
+	<td class="td8"> 17/09/2008</td>
+    <td class="td9">Prestação de Serviços de avaliação psicológica e psicologia clínica.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">011/2007</td>
+    <td class="td2"></td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4"></td>
+    <td class="td5"></td>
+    <td class="td6"></td>
+    <td class="td7"> </td>
+    <td class="td8"></td>
+    <td class="td9"></td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">010/2007</td>
+    <td class="td2"></td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4"></td>
+    <td class="td5"></td>
+    <td class="td6"></td>
+    <td class="td7"> </td>
+    <td class="td8"></td>
+    <td class="td9"></td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">009/2007</td>
+    <td class="td2">1620/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÁUDIO TOBIAS ACATAUASSÚ NUNES</td>
+    <td class="td5">061.023.102-25</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">19/07/2007 </td>
+	<td class="td8">18/07/2008</td>
+    <td class="td9">Prestação de Serviços otorrinolaringologia e intervenções cirúrgicas na cabeça e pescolo, exames audiológicos e laringoscopias.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">008/2007</td>
+    <td class="td2"></td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4"></td>
+    <td class="td5"></td>
+    <td class="td6"></td>
+    <td class="td7"> </td>
+    <td class="td8"></td>
+    <td class="td9"></td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">007/2007</td>
+    <td class="td2"></td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4"></td>
+    <td class="td5"></td>
+    <td class="td6"></td>
+    <td class="td7"> </td>
+    <td class="td8"></td>
+    <td class="td9"></td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">006/2007</td>
+    <td class="td2">1326/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">JOSÉ TADEU COIMBRA SAMPAIO</td>
+    <td class="td5">040.079.722-49</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">19/06/2007</td>
+	<td class="td8"> 18/06/2008</td>
+    <td class="td9">serviços médicos para servidores da CDP</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">005/2007</td>
+    <td class="td2">1326/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">CLÍNICA FISIOTERÁPICA DO PARÁ S/S LTDA. (FISIOMED)</td>
+    <td class="td5">00.435.087/0001/20</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">19/06/2007</td>
+	<td class="td8"> 18/06/2008</td>
+    <td class="td9">Prestação de Serviços de médicos.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">004/2007</td>
+    <td class="td2">1326/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">MARIA JOSÉ C. FRANCO</td>
+    <td class="td5">07.796.726/0001-21</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">19/06/2007</td>
+	<td class="td8"> 18/06/2008</td>
+    <td class="td9">Prestação de Serviços de avaliação psicológica e psicologia clínica.</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">003/2007</td>
+    <td class="td2"></td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4"></td>
+    <td class="td5"></td>
+    <td class="td6"></td>
+    <td class="td7"> </td>
+    <td class="td8"></td>
+    <td class="td9"></td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">002/2007</td>
+    <td class="td2">1326/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">ALINE DIAS O DE ALMEIDA</td>
+    <td class="td5">510.074.282-87</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">19/06/2007 </td>
+    <td class="td8">18/06/2008</td>
+    <td class="td9">Prestação de Serviços de Fonoaudiologia</td>
+    <td class="td10"></td>
+</tr>
+<tr>
+    <td class="td0"></td>
+    <td class="td1">001/2007</td>
+    <td class="td2">1326/2007</td>
+    <td class="td3">INEXIGIBILIDADE</td>
+    <td class="td4">DANIELLE NASCIMENTO ALMEIDA</td>
+    <td class="td5">604.228.152-68</td>
+    <td class="td6">CONCLUÍDO</td>
+    <td class="td7">19/06/2007</td>
+	<td class="td8"> 18/06/2008</td>
+    <td class="td9">Prestação de Serviços de psicologia.</td>
+    <td class="td10"></td>
+</tr>
+
+    </tbody>
+    </table>
+    </div>
+                        
+    </div>
+    </div>
+    </div>
+    </div>
+          
+    <footer class="footer">
+        <div class="container ">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <p style="color:white"> Companhia Docas do Pará - CDP </br>Av.Presidente Vargas, 41, CEP 66010-000, Belém - Pará - Brasil
+            </br> Tel: (91) 3182-9000 | CNPJ: 04.933.552/0001-03 </p>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            <img src="img/logo.png" width="250px">
+
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    
+    <!-- jQuery -->
+    <!-- Booststrap -->
+    <!-- DataTable -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="js/pace.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        var table = $('#tab1').DataTable({
+           responsive: true,
+            dom: 'Bfrtip',
+        buttons: [ { extend: 'excelHtml5',
+            autoFilter: true,
+            sheetName: 'Exported data',
+        },
+            {
+                extend: 'pdfHtml5',
+                download: 'open',
+                 orientation: 'landscape',
+                pageSize: 'LEGAL',
+                customize: function ( doc ) {
+                    doc.content.splice( 1, 0, {
+                        margin: [ 0, 0, 0, 12 ],
+                        alignment: 'center',
+                        image: 'data:image/png;base64,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'
+                    } );
+                }
+            }
+
+        ],
+            
+
+            "ordering": false,
+
+            "language": {
+                "lengthMenu": "Exibição de _MENU_ registros por página",
+                "zeroRecords": "Não encontrado - desculpa",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponível",
+                "infoFiltered": "(filtrado de _MAX_ total de registros)",
+                "search": "Procurar:",
+                "paginate": {
+                    "first": "Primeiro",
+                    "last": "Último",
+                    "next": "Próximo",
+                    "previous": "Anterior"
+                }
+
+            }
+        });
+
+
+    });
+
+</script> 
+</body>
+</html>

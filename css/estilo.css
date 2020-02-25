@@ -1,0 +1,198 @@
+/*------------------------------*/
+/*------------FONTES------------
+/*------------------------------*/
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../fonts/proxima-nova-webfont.woff2') format('woff2'), url('../fonts/proxima-nova-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proximanovacondensed';
+  src: url('../fonts/proxima-nova-condensed-semibold-webfont.woff2') format('woff2'), url('../fonts/proxima-nova-condensed-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'), url('../fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'genevaregular';
+  src: url('../fonts/geneva_0-webfont.woff2') format('woff2'), url('../fonts/geneva_0-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proximanovabold';
+  src: url('../fonts/proxima-nova-bold-webfont.woff2') format('woff2'), url('../fonts/proxima-nova-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 140px;
+  font-family: 'proximanova';
+}
+
+
+/*-------NAVBAR-------*/
+
+/*primeira navbar
+------------*/
+
+.nav-first {
+  background: url(../img/background.png) center no-repeat;
+  height: 100px;
+  background-color: #325093;
+}
+
+
+/*segunda navbar
+------------*/
+.nav-second {
+  height: 65px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: 'proximanovacondensed', sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 5px 12px 0px rgba(0, 0, 0, .20);
+  background-color: #F8F9FA;
+}
+
+.nav-link {
+  color: #406AB3;
+}
+
+.dropdown-item {
+  color: #406AB3;
+  font-size: 12px;
+  background-color: #F8F9FA;
+
+}
+
+.nav-item {}
+
+
+
+/*-------MODAL-------*/
+.btn-outline-secondary:focus,
+.btn-outline-secondary.focus {
+  box-shadow: none !important;
+}
+
+
+
+.nav-second a:hover/*,
+.pageactive*/ {
+  color: #fff;
+  background-color: #46609B;
+}
+
+
+/*-------BREADCRUMB-------*/
+
+.breadcrumb {
+  font-size: 14px;
+  width: 100%;
+  float: left;
+  margin: 0 0 20px 0;
+  background: #FFF;
+  padding: 20px 35px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+.breadcrumb>li a {
+  text-decoration: none;
+  color: #555;
+}
+
+.breadcrumb>.active {
+  color: #999;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "›";
+  vertical-align: top;
+  font-size: 25px;
+  line-height: 18px;
+}
+
+
+/*-------DESCRIÇÃO-------*/
+
+/*seção
+------------*/
+.descricao1 {
+  font-family: 'proximanovabold';
+  font-size: 18px;
+  color: #555555;
+  border-bottom: 3px solid #EBEBEB !important;
+}
+
+/*orgãos
+------------*/
+.descricao2 {
+  font-size: 12px;
+  color: #555555;
+}
+
+/*footer
+------------*/
+.footer {
+  background: url(../img/footer.png) center;
+  font-size: 14px;
+  background-color: #3B5CA1;
+  height: 120x;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer>div {
+  margin-top: 30px;
+}
+
+/*dropdown
+------------*/
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0;
+    margin:0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #F8F9FA;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 0px;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
+
